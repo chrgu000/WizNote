@@ -1,0 +1,40 @@
+ORM层项目结构：
+    Dao层、mapper.xml层（mapper层）、pojo层（entity层）
+MyBatis官方教程：http://mybatis.github.io/mybatis-3/,中文版：http://mybatis.github.io/mybatis-3/zh/sqlmap-xml.html
+ORM工具的基本思想：
+    1：从配置文件（通常是xml配置文件）得到sessionfactory
+    2：由sessionfactory产生session
+    3：在session中完成对数据的增删改查和事务提交等
+    4：在用完后关闭session
+    5：在java对象和数据库对象之间做mapping的配置文件也通常是xml文件
+
+MyBatis的配置文件详解：
+    1：Configuration.xml是MyBatis用来建立sessionFactory用的，主要包含数据库连接参数信息，java类的别名（这个别名可以在mapper.xml配置文件中给resultType指定值）
+    2：具体的类映射配置xml文件也要引入到Configuration.xml中
+    3：在具体的映射配置xml中主要定义各种sql语句，以及语句的参数，返回的类型等
+    4：CRUD操作时可以直接通过session对象session.selectOne(具体配置文件的namespace.sql语句ID,1)，或者通过Dao层的interface里的方法名称与具体配置文件的sql语句ID对应，Dao d=session.getMapper(Dao.class);Pojo p=d.sql语句ID（或者方法名称）（）;同时第二种方法的配置文件中的mapper的命名空间必须与Dao的package+Dao接口名称一致。
+    5：resultMap，用于接收返回list<C>，需要自行配置，同时查询的sql语句配置resultMap属性的值，一般查询单条数据的话直接使用resultType属性
+    6：插入时使用#{name}传值，useGeneratedKeys=“true”表示MyBatis会获取数据库自动生成的主键值，keyProperty=“id”指定将获取的值注入到parameterType值的id属性中
+    7:联合查询，
+        多对一：在配置文件的resultMap中使用association配置pojo类的依赖类，而不是使用一般的result或者id配置，当然在association内部仍然使用result和id配置，或者直接在resultMap的association中的resultMap属性值直接复用已经配置好的resultMap（即一方配置的resultMap）
+        
+与spring的集成：
+    1：将原来的Configuration.xml引入到spring的配置文件applicationContext.xml中（通过配置dataSource的configLocation）
+    2:.....
+    重点是SqlSessionFactoryBean与MapperFactoryBean
+与SpringMVC集成：
+    重点是SpringMVC配置文件，spring配置文件（applicationContext.xml），被applicationContext.xml的SQLSessionFactory的dataSource属性引入的MyBatis配置文件。
+
+MyBatis的分页：
+    1：可以通过传递limit参数值给sql语句，parameterType必须是包含pageSize,offSet属性
+    2：然而更通用的是通过分页插件实现，当然需要在MyBatis的配置文件中引入这个插件
+
+MyBatis的动态SQL：基于OGNL表达式
+    1：if
+    2:choose（when，otherwise）
+    3：trim（对包含的内容加上prefix，或者suffix等）,比如条件前加上where，第一个条件前去掉and，or
+    4：where（能智能处理and or，不必担心多余导致语法错误），专门用于where条件
+    5：set（用于更新时），专门用于set，类似where
+    6：foreach（在实现MyBatis in语句查询时特别有用），可用于需要传递list类型值时。
+MyBatis代码生成工具使用:
+MyBatis的SQLSessionDaoSupport使用：

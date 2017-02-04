@@ -1,0 +1,1 @@
+1：@Resource注解不指定name默认的bean名称是类型type名称首字母小写，不是变量名称。而不使用@Resource注解时，使用property指定的是变量名称
