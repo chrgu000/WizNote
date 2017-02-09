@@ -1,0 +1,122 @@
+Nginx-nginx.conf:
+	
+	proxy_pass没有root，location的root都是相对匹配地址的,自动带上匹配的地址
+	Nginx能做什么？静态页面存放本地，动态页面放本地服务器						
+	
+Zookeeper配置：
+	zookeeper怎么同步不同服务上的session
+	
+ no skip work tree
+
+Biz层不应该面向model，应该面向页面数据。如果照V5的计费项设计
+使用<id,userId>来存储关系
+
+// db层没有数据被删除或更新到也算data=0返回,删除更新当做有该条数据进行操作，没有的可以调用另外的检测方法判断是否存在再进行删除修改
+if里面写一定的条件
+使用DbView还是使用多个连接的分歧点主要是在查询上的：更新，删除，新增都不需要使用DbView
+	使用Dbview的一部分条件是Cond关联多张表，必须使用DbView，另一个条件是使用list查询，但是返回model跨表(属性类型为其他model类型，list类型的使用DbView并不能解决，只存储id不算跨表)，必须使用DbView
+	使用多个连接进行查询的一部分条件是缓存或者返回结果中含有list，必须使用多个连接进行查询
+
+
+对返回结果的判断，false还是Error：
+	删除，不报错则当做是操作成功，无论是否删除到了
+	修改，不报错则当做是操作成功，无论是否修改到了
+
+
+什么时候使用抛出异常，在外层catch后转成Error。什么时候直接在里层使用Error，并在外层判断是否有Error
+	检查异常需要使用声明Exception，在外层catch后转成Error,也可以在里层直接catch转成Error
+	业务型Error以及可能出现的runtimeException，需要直接转成自定义Error，比如由于offset为null出现的runtimeException我们需要判断并转成Error，而不是Throws。
+	业务型才需要转成Error，比如输入错误，其他的都是系统错误
+
+<update id="batchUpdate" parameterType="java.util.List">  
+	update test set test=${item.test}+1 where id in  
+	<foreach collection="list" item="item" index="index" open="(" close=")" separator=",">  
+	${item.id}  
+	</foreach>  
+</update>  
+
+<update id="updateOrders" parameterType="java.util.List">
+ update orders set state = '0' where no in
+ <foreach collection="list" item="nos" open="(" separator="," close=")">
+   #{nos}
+ </foreach>
+ </update>
+ 
+或者
+<update id="updateBatch" parameterType="list">
+            update course
+            <trim prefix="set" suffixOverrides=",">
+             <trim prefix="peopleId =case" suffix="end,">
+                 <foreach collection="list" item="i" index="index">
+                         <if test="i.peopleId!=null">
+                          when id=#{i.id} then #{i.peopleId}
+                         </if>
+                 </foreach>
+              </trim>
+              <trim prefix=" roadgridid =case" suffix="end,">
+                 <foreach collection="list" item="i" index="index">
+                         <if test="i.roadgridid!=null">
+                          when id=#{i.id} then #{i.roadgridid}
+                         </if>
+                 </foreach>
+              </trim>
+              
+              <trim prefix="type =case" suffix="end," >
+                 <foreach collection="list" item="i" index="index">
+                         <if test="i.type!=null">
+                          when id=#{i.id} then #{i.type}
+                         </if>
+                 </foreach>
+              </trim>
+       <trim prefix="unitsid =case" suffix="end," >
+                  <foreach collection="list" item="i" index="index">
+                          <if test="i.unitsid!=null">
+                           when id=#{i.id} then #{i.unitsid}
+                          </if>
+                  </foreach>
+           </trim>
+             </trim>
+            where
+            <foreach collection="list" separator="or" item="i" index="index" >
+              id=#{i.id}
+          </foreach>
+</update>
+
+<foreach>标签：foreach元素的属性主要有item，index，collection，open，separator，close。item表示集合中每一个元素进行迭代时的别名，
+index指定一个名字，用于表示在迭代过程中，每次迭代到的位置，
+open表示该语句以什么开始，
+separator表示在每次进行迭代之间以什么符号作为分隔符，
+close表示以什么结束，
+在使用foreach的时候最关键的也是最容易出错的就是collection属性，该属性是必须指定的，但是在不同情况下，该属性的值是不一样的，主要有一下3种情况：
+1.如果传入的是单参数且参数类型是一个List的时候，collection属性值为list；
+2.如果传入的是单参数且参数类型是一个array数组的时候，collection的属性值为array；
+3.如果传入的参数是多个的时候，我们就需要把它们封装成一个Map了，当然单参数也可以封装成map，实际上如果你在传入参数的时候，在MyBatis里面也是会把它封装成一个Map的，map的key就是参数名，所以这个时候collection属性值就是传入的List或array对象在自己封装的map里面的key；
+关于以上三种collection的用法。百度上有很多帖子。这里不进行赘述。
+<trim>标签：有四个属性：
+Prefix：指的是<trim></trim>所包含的部分（body）以什么开头。
+prefixOverrides：指<trim>中如果有内容时可忽略（body）前的匹配字符。
+suffix：指的是<trim></trim>所包含的部分（body）以什么结尾。
+suffixOverrides：指<trim>中如果有内容时可忽略（body）后的匹配字符。
+http://topmanopensource.iteye.com/blog/1833001
+
+
+
+
+所有的预定义异常对用户来说都是无意义的，用户只关心参数输入异常(包括操作异常，如session失效不能进行其他操作)和非参数输入异常(系统异常)，这些都是自定义异常，自定义异常的定义详细程度是设计的关键点，
+详细的自定义异常需要
+
+
+BeanUtils.copyProperties方法：根据Target的名称来找Source对应的属性，类型不匹配不可以进行赋值，ignore的是Target的属性
+	Class<?> actualEditable = target.getClass();
+	PropertyDescriptor[] targetPds = getPropertyDescriptors(actualEditable);
+	for (PropertyDescriptor targetPd : targetPds)
+		PropertyDescriptor sourcePd = getPropertyDescriptor(source.getClass(), targetPd.getName());
+		Object value = readMethod.invoke(source);
+		writeMethod.invoke(target, value);//调用这个方法，虽然传递的是object，但是还是必须保证类型小于method的参数类型		
+Jdk的invoke方法
+
+
+Db delete不是只有DeleteError吗
+在要查询total和list的时候，先查询total，判断total>0才进行下一步的获取list。
+left join是可以重复
+BeanUtils的copy方法必须名称相同，类型相同(typeMisMatch)

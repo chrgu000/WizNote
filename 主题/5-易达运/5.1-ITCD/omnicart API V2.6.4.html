@@ -1,0 +1,9396 @@
+<!DOCTYPE html><html lang="en"><head>
+<title> omnicart API V2.md---小书匠,在线编辑器,MARKDOWN,Evernote,文件版本</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="()">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style type="text/css">
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 1.1em;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+
+h1.story_title {
+	margin: 0.7em 0;
+}
+.story_tags {
+	margin: 0 0 1.2em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+	margin: 1.0em 0 .6em 0;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 10px 35px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+
+dl {
+  margin-bottom: 20px;
+}
+
+dt,
+dd {
+  line-height: 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #dddddd;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #999999;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+	border: 1px solid rgba(34,36,38,.15);
+}
+.tag.label{
+display: inline-block;
+vertical-align: baseline;
+line-height: 1;
+margin: 0em 0.125em;
+background-color: #e8e8e8;
+border-color: #e8e8e8;
+background-image: none;
+padding: 0.6em 0.8em;
+color: rgba(0, 0, 0, 0.6);
+text-transform: none;
+font-weight: bold;
+border-radius: 0.2857rem;
+box-sizing: border-box;
+font-size: 0.7428rem;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table .table {
+  background-color: #ffffff;
+}
+
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+.table-celled.table tr td,.table-celled.table tr th {
+    border-left: 1px solid rgba(34,36,38,.1)
+}
+
+.table-celled.table tr td:first-child,.table-celled.table tr th:first-child {
+    border-left: none
+}
+
+.toc ul {
+	list-style: none;
+}
+p {
+	line-height: 1.6;
+}
+body>p {
+  margin-bottom: 1.8em;
+}
+body>p>img.center,
+body>p>a>img.center {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(128,128,128,0.3);
+}
+body {
+	font-family: 'Helvetica Neue', Helvetica, Tahoma, Arial, 'Hiragino Sans GB', STHeiti, "Microsoft YaHei", "微软雅黑", 'WenQuanYi Micro Hei', STXihei, "华文细黑", Heiti, "黑体", SimSun, "宋体", Song, sans-serif;
+  font-size: 1.15em;
+  font-weight: 100;
+//  line-height: 1.8em;
+  color: #2f2f2f;
+}
+em.cjk_emphasis{
+	font-style: normal;
+	font-family: Georgia,"Times New Roman",Times,"楷体","AR PL UKai CN", "NSimSun","Songti SC","SimSun",serif!important;
+}
+body dt,
+body dd {
+  line-height: 1.35em;
+}
+body code, body .xiaoshujiang_code {
+//	background-color: #D6DBDF;
+	border: 0;
+  border-radius: 4px;
+//  color: #2C3E50;
+  font-size: 90%;
+//  padding: 2px 4px;
+}
+code {
+	background-color: #D6DBDF;
+	border-radius: 4px;
+	color: #2C3E50;
+	padding: 2px 4px;
+}
+.xiaoshujiang_code ol{
+	margin-bottom: 0px;
+}
+body h1 {
+  line-height: 1.6;
+}
+body h2 {
+  line-hieght: 1.1;
+}
+body h3 {
+  line-height: 1.1;
+}
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ * Copyright (c) 2014-2015, Asciidocfx Team, (MIT Licensed)
+ * https://github.com/asciidocfx/highlight-treeview.js
+ */
+.language-treeview.hljs{
+  position: relative;
+}
+.hljs-folder,
+.hljs-hiddenfile,
+.hljs-file {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    height: 16px;
+}
+.hljs-folder:before,
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    top: 0;
+    content: '';
+    width: 14px;
+    height: 12px;
+    margin-top: 0px;
+    margin-right: 3px;
+    position: relative;
+    display: inline-block;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    height: 14px;
+    margin-left: 1px;
+}
+.hljs-hiddenfile {
+    opacity: 0.6;
+}
+.hljs-file.photo:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c5";
+}
+.hljs-file.plain:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f016";
+}
+.hljs-file.source:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c9";
+}
+.hljs-file.archive:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c6";
+}
+.hljs-file.audio:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c7";
+}
+.hljs-file.video:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c8";
+}
+.hljs-file.pdf:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c1";
+}
+.hljs-file.xls:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c3";
+}
+.hljs-file.doc:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c2";
+}
+.hljs-file.ppt:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c4";
+}
+.hljs-folder:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f114";
+}
+.hljs-hiddenfile:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f016";
+}
+.hljs-tvline {
+    margin-left: 6px;
+    position: absolute;
+    text-indent: -99em;
+    padding-bottom: 8px;
+    vertical-align: top;
+    display: inline-block;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch {
+    width: 8px;
+    height: 8px;
+    margin-top: -1px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch.win {
+    width: 14px;
+    margin-right: 2px;
+}
+.hljs-folder-last-branch {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-last-branch.win {
+    width: 13px;
+    margin-right: 2px;
+}
+
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ */
+
+
+.mark{
+	border: 0;
+  background-color: #ddf3e7;
+  border-radius: 4px;
+  color: #29754d;
+  font-size: 90%;
+  padding: 2px 4px;
+}
+.line_mark{
+	border: 1px dashed #3A4C42;
+}
+code .mark, .xiaoshujiang_code .mark{
+	border-radius: 0px;
+	font-size: initial;
+	padding: initial;
+}
+a.attachment{
+	background-color: #ecf0f3;
+	border: 1px solid #bec6cb;
+	display: inline-block;
+	padding: 5px;
+	margin: 2px;
+	min-width: 250px;
+}
+a.attachment i.fa{
+	font-size: 3em;
+  float: left;
+  margin-right: 0.2em;
+}
+a.attachment .filename{
+	vertical-align: top;
+  text-align: left;
+  font-weight: bold;
+}
+a.attachment .filesize{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  opacity: .6;
+  font-size: 80%;
+  white-space: nowrap;
+}
+.checkbox .checked{
+	text-decoration: line-through;
+}
+.flow-chart, .sequence-diagram{
+	text-align: center;
+}
+.plot, .plot-image{
+	text-align: center;
+	min-height: 200px;
+	min-width: 200px;
+}
+
+pre, .xiaoshujiang_pre {
+	line-height: initial !important;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.xiaoshujiang_pre {
+	margin: 1em 0px;
+	font-family: monospace;
+	white-space: pre;
+}
+
+.story_align_left, .story_align_left .story_image_container {
+	text-align: left;
+}
+.story_align_right, .story_align_right .story_image_container {
+	text-align: right;
+}
+.story_align_center, .story_align_center .story_image_container {
+	text-align: center;
+}
+.story_align_justify, .story_align_justify .story_image_container {
+	text-align: justify;
+}
+
+
+/** 
+ * code line nums
+ */
+code.hljs.code_linenums, .xiaoshujiang_code.hljs.code_linenums{
+	position: relative;
+}
+.ol_linenums{
+	padding: 0px;
+	margin-left: 30px;
+	border-left: 1px solid #e0e0e0;
+}
+.li_linenum{
+	line-height: 20px;
+	margin-left: 10px;
+	list-style: none;
+	counter-increment: lines 1;
+}
+.li_linenum.li_list_style{
+	list-style: inherit;
+	margin-left: 5px;
+}
+.li_linenum:before, .li_linenum_before_span{
+	content: counter(lines, decimal);
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  width: 2.5em;
+	opacity: 0.5;
+  vertical-align: top;
+}
+.li_linenum_before_span_hide{
+	display: none;
+}
+.xiaoshujiang_code .code_line_break_hack{
+	margin:0;
+	border:0;
+	border-top:0;
+	border-bottom:0;
+}
+/** 
+ * code line nums
+ */
+.mathjax-container{
+	text-align: center;
+}
+div.mathjax{
+	max-width: 700px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+text{
+	font-size: 14px;
+}
+
+/**
+ * block image
+ */
+
+.story_image_container{
+	text-align: center;
+}
+.story_image_container>.story_image{
+	display: inline-block;
+  position: relative;
+	max-width: 80%;
+}
+.story_image_caption{
+	border-bottom: 1px solid #d9d9d9;
+	display: inline-block;
+	color: #999;
+	padding: 10px;
+}
+.story_image_blank_caption{
+	border-bottom: 0px;
+}
+/**
+.story_image:before, .story_image:after{
+	content: '';
+	position: absolute;
+	z-index: -2;
+	bottom: 13px;
+	left: 10px;
+	width: 50%;
+	height: 20%;
+	border-radius: 10px/90px;
+	box-shadow: 0 15px 10px rgba(0,0,0,0.7);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+.story_image:after {
+	right: 10px;
+	left: auto;
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+
+**/
+.story_image>img{
+	border-radius: 0.3125em;
+	box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
+}
+.story_inline_image>img{
+	max-width: 50%;
+	vertical-align: bottom;
+}
+
+/*
+
+Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: white;
+  color: black;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.hljs-annotation,
+.diff .hljs-header,
+.hljs-chunk,
+.apache .hljs-cbracket {
+  color: #008000;
+}
+
+.hljs-keyword,
+.hljs-id,
+.hljs-built_in,.css
+.smalltalk .hljs-class,
+.hljs-winutils,
+.bash .hljs-variable,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title,
+.xml .hljs-tag,
+.xml .hljs-tag .hljs-value {
+  color: #00f;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-parent,
+.hljs-tag .hljs-value,
+.hljs-rule .hljs-value,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-template_tag,
+.django .hljs-variable,
+.hljs-addition,
+.hljs-flow,
+.hljs-stream,
+.apache .hljs-tag,
+.hljs-date,
+.tex .hljs-formula,
+.coffeescript .hljs-attribute,
+.hljs-name {
+  color: #a31515;
+}
+
+.ruby .hljs-string,
+.hljs-decorator,
+.hljs-filter .hljs-argument,
+.hljs-localvars,
+.hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-envvar,
+.hljs-shebang,
+.hljs-preprocessor,
+.hljs-pragma,
+.userType,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #2b91af;
+}
+
+.hljs-phpdoc,
+.hljs-dartdoc,
+.hljs-javadoc,
+.hljs-xmlDocTag {
+  color: #808080;
+}
+
+.hljs-type,
+.hljs-typename { font-weight: bold; }
+
+.vhdl .hljs-string { color: #666666; }
+.vhdl .hljs-literal { color: #a31515; }
+.vhdl .hljs-attribute { color: #00b0e8; }
+
+.xml .hljs-attribute { color: #f00; }
+
+
+
+</style>
+</head><body>
+<div><div class="preview" id="wmd-preview">
+
+	<div class="preview"><h1 id="api20v2" name="api20v2"><a name="api20v2" class="blank_anchor_name"></a>Api v2</h1>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>作者</th>
+<th>版本</th>
+<th>日期</th>
+<th>修改描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tim.Huang</td>
+<td>2.0</td>
+<td>2016-02-06</td>
+<td>建立基本的接口</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.1</td>
+<td>2016-03-03</td>
+<td>取消api/v2/order/edit<br>增加api/v2/order/addhistory和api/v2/order/fulfill<br>修改api/v2/order/add提交数据的结构</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.2</td>
+<td>2016-03-07</td>
+<td>增加常用字段说明，以及订单接口中的字段对应的数据来源链接</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.3</td>
+<td>2016-3-16</td>
+<td>修改部分接口。uri示例中引用使用错误中划线的路径</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.4</td>
+<td>2016-3-19</td>
+<td>api/v2/country/lists<br>api/v2/customer/lists<br>api/v2/customer_group/lists<br>api/v2/order/lists<br>api/v2/payment_group/lists<br>api/v2/shipping_group/lists<br>api/v2/zone/lists<br>增加page_limit参数，用于控制字段返回的条数。</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.5</td>
+<td>2016-4-1</td>
+<td>调整api/v2/product相关的文档。主要增加了product_image,product_coupon,product_filter,product_category,product_related,product_cross,product_upselling的数据。<br>添加api/v2/category,添加api/v2/category/add,添加api/v2/category/edit,添加api/v2/category/delete文档<br>删除api/v2/image相关的文档</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.6</td>
+<td>2016-4-30</td>
+<td>order/fulfill接口增加order_status_id参数，用于回写状态</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.6.1</td>
+<td>2016-9-27</td>
+<td>order/add接口错误,将payment_city改为city</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.6.2</td>
+<td>2016-9-30</td>
+<td>新增api/v2/address</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.6.3</td>
+<td>2016-10-9</td>
+<td>api/v2/order/add 增加pon字段，用于记录采购单号.<br>api/v2/product/lists 增加过滤参数 filter_product_ids和filter_product_skus</td>
+</tr>
+<tr>
+<td>Tim.Huang</td>
+<td>2.6.4</td>
+<td>2016-10-9</td>
+<td>api/v2/order/addhistory 增加通过pon和email或者customer_id 查询order_id的参数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="e68ea5e58fa3e59fbae7a180" name="e68ea5e58fa3e59fbae7a180"><a name="e68ea5e58fa3e59fbae7a180" class="blank_anchor_name"></a>接口基础</h2>
+<p>在v2接口注意事项：</p>
+<ol>
+<li><p>通过后台获取key和secret</p></li>
+</ol>
+<ul>
+<li><p>key 用于获取token的值</p></li>
+<li><p>secret 用于于校验提交的数据</p></li>
+</ul>
+<ol start="2">
+<li><p>一般情况下输入接口的参数为只有3个参数：</p></li>
+</ol>
+<ul>
+<li><p>token 用于确定是否有登录权限，通过api/login接口中获取的登录，有效时间不超过1小时</p></li>
+<li><p>data 传入的数据全部使用</p></li>
+<li><p>sign 用于验证data数据</p></li>
+</ul>
+<ol start="3">
+<li><p>增加数据加密字符串</p></li>
+</ol>
+<ul>
+<li><p>data 数据的组成采用 RFC1738  ，经过base64加密<br>
+如要传参数 order_id=10&amp;shipping_id=1<br>
+base64_encode("order_id=10&amp;shipping_id=1");</p></li>
+</ul>
+<ol start="4">
+<li><p>数据验证</p></li>
+</ol>
+<ul>
+<li><p>sign 由data的未加密前的数据与secret组成新的字符串再使用md5生成hash.<br>
+使用上面的例子：<span style="color:blue">order_id=10&amp;shipping_id=1</span><br>
+假如secret的值为<span style="color:red">#11111#</span><br>
+md5("<span style="color:red">#11111#</span><span style="color:blue">order_id=10&amp;shipping_id=1</span><span style="color:red">#11111#</span>")</p></li>
+</ul>
+<ol start="5">
+<li><p>返回数据,采用json结构</p></li>
+</ol>
+<ul>
+<li><p>status_no 错误编码.具体查看<a href="#status_no_list">状态表</a>.</p></li>
+<li><p>msg 提示</p></li>
+<li><p>info 字典</p></li>
+<li><p>list 数组</p></li>
+</ul>
+<p>6.常见字段说明</p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言的类型，参考 <a href="#api-language/lists">api/v2/language/lists</a></td>
+</tr>
+<tr>
+<td>customer_field_id</td>
+<td>客户自定义字段的id,参考 <a href="#api-custom-field-lists">api/v2/custom_field/lists</a></td>
+</tr>
+<tr>
+<td>order_status_id</td>
+<td>订单id，参考 <a href="#api-order-status-lists">api/v2/order_status/lists</a></td>
+</tr>
+<tr>
+<td>country_id</td>
+<td>国家id，参考 <a href="#api-country-lists">api/v2/country/lists</a></td>
+</tr>
+<tr>
+<td>zone_id</td>
+<td>区域id，参考 <a href="#api-zone-lists">api/v2/zone/lists</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="e585b7e4bd93e68ea5e58fa3" name="e585b7e4bd93e68ea5e58fa3"><a name="e585b7e4bd93e68ea5e58fa3" class="blank_anchor_name"></a><span id="menu">具体接口</span></h2>
+<ul>
+<li><p><a href="#api-login">api/v2/login</a></p></li>
+<li><p><a href="#api-language/lists">api/v2/language/lists</a></p></li>
+<li><p><a href="#api-customer">api/v2/customer</a>
+</p><ul>
+<li><p><a href="#api-customer-add">api/v2/customer/add</a></p></li>
+<li><p><a href="#api-customer-edit">api/v2/customer/edit</a></p></li>
+<li><p><a href="#api-customer-delete">api/v2/customer/delete</a></p></li>
+<li><p><a href="#api-customer-lists">api/v2/customer/lists</a></p></li>
+<li><p><a href="#api-custom-field-lists">api/v2/custom_field/lists</a></p></li>
+<li><p><a href="#api-customer-group-lists">api/v2/customer_group/lists</a></p></li>
+<li><p><a href="#api-shipping-group-lists">api/v2/shipping_group/lists</a></p></li>
+<li><p><a href="#api-payment-group-lists">api/v2/payment-group/lists</a></p></li>
+<li><p><a href="#api-address">api/v2/address</a></p></li>
+</ul>
+</li>
+<li><p><a href="#api-order">api/v2/order</a>
+</p><ul>
+<li><p><a href="#api-order-add">api/v2/order/add</a></p></li>
+<li><p><del><a href="#api-order-edit">api/v2/order/edit</a></del></p></li>
+<li><p><del><a href="#api-order-delete">api/v2/order/delete</a></del></p></li>
+<li><p><a href="#api-order-lists">api/v2/order/lists</a></p></li>
+<li><p><a href="#api-order-addhistory">api/v2/order/addhistory</a></p></li>
+<li><p><a href="#api-order-fulfill">api/v2/order/fulfill</a></p></li>
+<li><p><a href="#api-order-status-lists">api/v2/order_status/lists</a></p></li>
+<li><p><a href="#api-country-lists">api/v2/country/lists</a></p></li>
+<li><p><a href="#api-zone-lists">api/v2/zone/lists</a></p></li>
+<li><p><a href="#api-shipping-lists">api/v2/shipping/lists</a></p></li>
+<li><p><a href="#api-payment-lists">api/v2/payment/lists</a></p></li>
+</ul>
+</li>
+<li><p><a href="#api-product">api/v2/product</a>
+</p><ul>
+<li><p><a href="#api-product-add">api/v2/product/add</a></p></li>
+<li><p><a href="#api-product-edit">api/v2/product/edit</a></p></li>
+<li><p><a href="#api-product-delete">api/v2/product/delete</a></p></li>
+<li><p><a href="#api-product-lists">api/v2/product/lists</a></p></li>
+<li><p><a href="#api-category">api/v2/category</a></p></li>
+<li><p><a href="#api-category-add">api/v2/category/add</a></p></li>
+<li><p><a href="#api-category-edit">api/v2/category/edit</a></p></li>
+<li><p><a href="#api-category-delete">api/v2/category/delete</a></p></li>
+<li><p><a href="#api-category-lists">api/v2/category/lists</a></p></li>
+</ul>
+</li>
+<li><p><a href="#api-option">api/v2/option</a>
+</p><ul>
+<li><p><a href="#api-option-add">api/v2/option/add</a></p></li>
+<li><p><a href="#api-option-edit">api/v2/option/edit</a></p></li>
+<li><p><a href="#api-option-delete">api/v2/option/delete</a></p></li>
+<li><p><a href="#api-option-lists">api/v2/option/lists</a></p></li>
+</ul>
+</li>
+<li><p><a href="#api-attribute">api/v2/attribute</a>
+</p><ul>
+<li><p><a href="#api-attribute-groupadd">api/v2/attribute/groupadd</a></p></li>
+<li><p><a href="#api-attribute-groupedit">api/v2/attribute/groupedit</a></p></li>
+<li><p><a href="#api-attribute-groupdelete">api/v2/attribute/groupdelete</a></p></li>
+<li><p><a href="#api-attribute-grouplists">api/v2/attribute/grouplists</a></p></li>
+<li><p><a href="#api-attribute-add">api/v2/attribute/add</a></p></li>
+<li><p><a href="#api-attribute-edit">api/v2/attribute/edit</a></p></li>
+<li><p><a href="#api-attribute-delete">api/v2/attribute/delete</a></p></li>
+<li><p><a href="#api-attribute-lists">api/v2/attribute/lists</a></p></li>
+</ul>
+</li>
+</ul>
+<h3 id="login" name="login"><a name="login" class="blank_anchor_name"></a><span id="api-login">login</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/login</p>
+<p><strong>请求方式</strong><br>
+POST 登录</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p style="color:#ccc">无token参数</p>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>Y</td>
+<td>通过后台获取的验证码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"登陆成功"
+    , "info":{
+        "token":"123123123123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"登陆失败"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>客户端会话字符串</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="language20lists" name="language20lists"><a name="language20lists" class="blank_anchor_name"></a><span id="api-language-lists">language lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/language/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<p>无</p>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{}
+    , "list":[
+        {
+            "language_id":""
+            , "name":""
+            , "code":""
+            , "locale":""
+            , "image":""
+            , "image_url":""
+            , "direcory":""
+            , "sort_order":""
+            , "status":""
+        }
+    ]
+}
+</code></pre>
+<p><strong>list 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>语言名</td>
+</tr>
+<tr>
+<td>code</td>
+<td>代码</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>编码</td>
+</tr>
+<tr>
+<td>image</td>
+<td>图片</td>
+</tr>
+<tr>
+<td>image_url</td>
+<td>外网访问的url</td>
+</tr>
+<tr>
+<td>direcory</td>
+<td>语言包目录</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>status</td>
+<td>状态</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="customer" name="customer"><a name="customer" class="blank_anchor_name"></a><span id="api-customer">customer</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/customer</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_id</td>
+<td>Y</td>
+<td>客户组id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success."
+    , "info":{
+        "customer_id":""
+        , "customer_group_id":""
+        , "shipping_group_id":""
+        , "store_id":""
+        , "firstname":""
+        , "lastname":""
+        , "email":""
+        , "telephone":""
+        , "fax":""
+        , "newsletter":""
+        , "question_and_answer":""
+        , "custom_field":[
+            {
+                "customer_field_id":""
+                , "value":""
+                , "customer_field_description":[
+                    {
+                        "language_id":""
+                        , "name":""
+                    }
+                ]
+            }
+        ]
+        , "status":""
+        , "approved":""
+        , "date_added":""
+        , "payment_group_id":""
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"no data"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_id</td>
+<td>客户id</td>
+</tr>
+<tr>
+<td>customer_group_id</td>
+<td>客户组id</td>
+</tr>
+<tr>
+<td>shipping_group_id</td>
+<td>运送组id</td>
+</tr>
+<tr>
+<td>payment_group_id</td>
+<td>付款组id</td>
+</tr>
+<tr>
+<td>firstname</td>
+<td>名字</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>姓</td>
+</tr>
+<tr>
+<td>email</td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>联系电话</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>传真</td>
+</tr>
+<tr>
+<td>newsletter</td>
+<td>是否订阅</td>
+</tr>
+<tr>
+<td>question_and_answer</td>
+<td>是否订阅问答信息</td>
+</tr>
+<tr>
+<td>custom_field</td>
+<td>数组，自定义客户信息</td>
+</tr>
+<tr>
+<td>status</td>
+<td>客户状态</td>
+</tr>
+<tr>
+<td>approved</td>
+<td>审核状态</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td>注册时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.custom_field数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>customer_field_description</td>
+<td>数组，名称</td>
+</tr>
+<tr>
+<td>value</td>
+<td>数据值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.customer_field_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>字段标题</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="customer20add" name="customer20add"><a name="customer20add" class="blank_anchor_name"></a><span id="api-customer-add">customer add</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/customer/add</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_group_id</td>
+<td>N</td>
+<td>客户组id</td>
+</tr>
+<tr>
+<td>shipping_group_id</td>
+<td>N</td>
+<td>运送组id</td>
+</tr>
+<tr>
+<td>payment_group_id</td>
+<td>N</td>
+<td>付款组id</td>
+</tr>
+<tr>
+<td>firstname</td>
+<td>Y</td>
+<td>名字</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>Y</td>
+<td>姓</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Y</td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>N</td>
+<td>联系电话</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>N</td>
+<td>传真</td>
+</tr>
+<tr>
+<td>newsletter</td>
+<td>N</td>
+<td>是否订阅</td>
+</tr>
+<tr>
+<td>question_and_answer</td>
+<td>N</td>
+<td>是否订阅问答信息</td>
+</tr>
+<tr>
+<td>custom_field</td>
+<td>N</td>
+<td>自定义客户信息,根据自定义配置确认是否为强制显示</td>
+</tr>
+<tr>
+<td>status</td>
+<td>N</td>
+<td>客户状态</td>
+</tr>
+<tr>
+<td>approved</td>
+<td>N</td>
+<td>审核状态</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td>N</td>
+<td>注册时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "customer_id":"123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_id</td>
+<td>新增的customer_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="customer20edit" name="customer20edit"><a name="customer20edit" class="blank_anchor_name"></a><span id="api-customer-edit">customer edit</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/customer/edit</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_id</td>
+<td>Y</td>
+<td>客户id</td>
+</tr>
+<tr>
+<td>customer_group_id</td>
+<td>N</td>
+<td>客户组id</td>
+</tr>
+<tr>
+<td>shipping_group_id</td>
+<td>N</td>
+<td>运送组id</td>
+</tr>
+<tr>
+<td>payment_group_id</td>
+<td>N</td>
+<td>付款组id</td>
+</tr>
+<tr>
+<td>firstname</td>
+<td>Y</td>
+<td>名字</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>Y</td>
+<td>姓</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Y</td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>Y</td>
+<td>联系电话</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>N</td>
+<td>传真</td>
+</tr>
+<tr>
+<td>newsletter</td>
+<td>N</td>
+<td>是否订阅</td>
+</tr>
+<tr>
+<td>question_and_answer</td>
+<td>N</td>
+<td>是否订阅问答信息</td>
+</tr>
+<tr>
+<td>custom_field</td>
+<td>N</td>
+<td>自定义客户信息,根据自定义配置确认是否为强制显示</td>
+</tr>
+<tr>
+<td>status</td>
+<td>N</td>
+<td>客户状态</td>
+</tr>
+<tr>
+<td>approved</td>
+<td>N</td>
+<td>审核状态</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "customer_id":"123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_id</td>
+<td>编辑的customer_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="customer20delete" name="customer20delete"><a name="customer20delete" class="blank_anchor_name"></a><span id="api-customer-delete">customer delete</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/customers/delete</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_ids</td>
+<td>N</td>
+<td>客户ids，<br>如：customer_ids[]=12&amp;customer_ids[]=11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "customer_ids":[12]
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_ids</td>
+<td>删除成功的customer_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="customer20lists" name="customer20lists"><a name="customer20lists" class="blank_anchor_name"></a><span id="api-customer-lists">customer lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/customer/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filter_name</td>
+<td>N</td>
+<td>客户名称</td>
+</tr>
+<tr>
+<td>filter_email</td>
+<td>N</td>
+<td>客户邮箱</td>
+</tr>
+<tr>
+<td>page</td>
+<td>N</td>
+<td>当前页数，不提交默认为1</td>
+</tr>
+<tr>
+<td>page_limit</td>
+<td>N</td>
+<td>每页的最大条数，默认为20，最大值为200</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no": 0,
+    "msg": "success",
+    "info": {
+        "total": 35,
+        "maxpage": 2,
+        "page": 1,
+        "per_page_num": 20,
+        "start": 0
+    },
+    "lists": [
+        {
+            "customer_id": "15",
+            "customer_group_id": "1",
+            "shipping_group_id": "2",
+            "store_id": "0",
+            "firstname": "nianatim",
+            "lastname": "wongtest",
+            "email": "niana.wang@edayun.cn",
+            "telephone": "",
+            "fax": "",
+            "newsletter": "1",
+            "question_and_answer": "1",
+            "address_id": "0",
+            "ip": "127.0.0.1",
+            "status": "1",
+            "approved": "1",
+            "safe": "0",
+            "date_added": "2016-01-08 00:40:00",
+            "payment_group_id": "0"
+        }
+    ]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>数据总条数</td>
+</tr>
+<tr>
+<td>maxpage</td>
+<td>最大的页号</td>
+</tr>
+<tr>
+<td>cur_page</td>
+<td>当前的页号</td>
+</tr>
+<tr>
+<td>pre_page_num</td>
+<td>每页输出的条数</td>
+</tr>
+<tr>
+<td>start</td>
+<td>开始查询的位置</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_id</td>
+<td>客户id</td>
+</tr>
+<tr>
+<td>customer_group_id</td>
+<td>客户组id</td>
+</tr>
+<tr>
+<td>shipping_group_id</td>
+<td>运送组id</td>
+</tr>
+<tr>
+<td>payment_group_id</td>
+<td>付款组id</td>
+</tr>
+<tr>
+<td>firstname</td>
+<td>名字</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>姓</td>
+</tr>
+<tr>
+<td>email</td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>联系电话</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>传真</td>
+</tr>
+<tr>
+<td>newsletter</td>
+<td>是否订阅</td>
+</tr>
+<tr>
+<td>question_and_answer</td>
+<td>是否订阅问答信息</td>
+</tr>
+<tr>
+<td>status</td>
+<td>客户状态</td>
+</tr>
+<tr>
+<td>approved</td>
+<td>审核状态</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td>注册时间</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="custom20field20lists" name="custom20field20lists"><a name="custom20field20lists" class="blank_anchor_name"></a><span id="api-custom-field-lists">custom field lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/custom_field/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<p>无参数</p>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{}
+    , "list":[
+        {
+            "custom_field_id":"1"
+            , "type":"text"
+            , "value":""
+            , "location":"account"
+            , "status":"1"
+            , "sort_order":"0"
+            , "custom_field_customer_group":[{
+                "customer_group_id":""
+                , "required":""
+            }]
+            , "customer_field_description":[{
+                "language_id":""
+                , "name":""
+            }]
+            , "customer_field_value":[
+                {
+                    "customer_field_value_id":""
+                    , "sort_order":""
+                    , "customer_field_value_description":[{
+                        {
+                            "langauge_id":""
+                            , "name":""
+                        }
+                    }]
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<p><strong>info 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>数据总条数</td>
+</tr>
+<tr>
+<td>cur_page</td>
+<td>当前的页号</td>
+</tr>
+<tr>
+<td>pre_page_num</td>
+<td>每页输出的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>custom_field_id</td>
+<td>自定义id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>字段类型，select,radio,checkbox,text,textarea,file,date,time,datetime</td>
+</tr>
+<tr>
+<td>value</td>
+<td>默认值</td>
+</tr>
+<tr>
+<td>location</td>
+<td>类型，只有account和address两种形式</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>customer_group_description</td>
+<td>数组，字段在分组显示的情况</td>
+</tr>
+<tr>
+<td>customer_field_description</td>
+<td>数据，字段的描述</td>
+</tr>
+<tr>
+<td>customer_field_value</td>
+<td>数组，只有在type为select,radio,checkbox时才有数据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.customer_group_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_group_id</td>
+<td>客户组id</td>
+</tr>
+<tr>
+<td>required</td>
+<td>是必填</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.customer_field_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>字段名</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.customer_field_value 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_value_id</td>
+<td>字段选项值id</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>customer_field_value_description</td>
+<td>数组，字段选项描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.customer_field_value.customer_field_value_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>字段名</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="customer20group20lists" name="customer20group20lists"><a name="customer20group20lists" class="blank_anchor_name"></a><span id="api-customer-group-lists">customer group lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/customer_group/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>N</td>
+<td>当页页数，默认为1</td>
+</tr>
+<tr>
+<td>page_limit</td>
+<td>N</td>
+<td>每页的最大条数，默认为20，最大值为200</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "total":''
+        , 'maxpage':''
+        , 'page':''
+        , 'per_page_number':''
+    }
+    , "list":[
+        {
+            "customer_group_id":"1"
+            , "approved":"0"
+            , "sort_order":"0"
+            , "customer_group_description":[{
+                "language_id":''
+                , "name":"Default"
+                , "description":"test"
+            }]
+        }
+    ]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>数据总条数</td>
+</tr>
+<tr>
+<td>cur_page</td>
+<td>当前的页号</td>
+</tr>
+<tr>
+<td>pre_page_num</td>
+<td>每页输出的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_group_id</td>
+<td>客户组id</td>
+</tr>
+<tr>
+<td>approved</td>
+<td>是否必须要通过审核</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序id</td>
+</tr>
+<tr>
+<td>customer_group_description</td>
+<td>数组，客户组的描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.customer_group_description数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>客户组名字</td>
+</tr>
+<tr>
+<td>description</td>
+<td>客户组描述</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="shipping20group20lists" name="shipping20group20lists"><a name="shipping20group20lists" class="blank_anchor_name"></a><span id="api-shipping-group-lists">shipping group lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/shipping_group/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<p>无</p>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{}
+    , "list":[
+        {
+            "shipping_group_id":"1"
+            , "approved":"0"
+            , "sort_order":"0"
+            , "shipping_code":["flat"]
+            , "shipping_group_description":[{
+                "language_id":''
+            , "name":"Default"
+            , "description":"test"
+            }]
+        }
+    ]
+}
+</code></pre>
+<p><strong>list数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shipping_group_id</td>
+<td>运输组id</td>
+</tr>
+<tr>
+<td>approved</td>
+<td>是否需要经过管理员的同意后才能使用</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序id</td>
+</tr>
+<tr>
+<td>shipping_code</td>
+<td>该运输组可以使用的运输方式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.customer_group_description数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>运输组名字</td>
+</tr>
+<tr>
+<td>description</td>
+<td>运输组描述</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="payment20group20lists" name="payment20group20lists"><a name="payment20group20lists" class="blank_anchor_name"></a><span id="api-payment-group-lists">payment group lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/payment_group/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<p>无</p>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{}
+    , "list":[
+        {
+            "payment_group_id":"1"
+            , "status":"0"
+            , "sort_order":"0"
+            , "payment_code":["flat"]
+            , "payment_group_description":[{
+                "language_id":''
+            , "name":"Default"
+            , "description":"test"
+            }]
+        }
+    ]
+}
+</code></pre>
+<p><strong>lists数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>payment_group_id</td>
+<td>支付组id</td>
+</tr>
+<tr>
+<td>status</td>
+<td>是否需要经过管理员的同意后才能使用</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序id</td>
+</tr>
+<tr>
+<td>payment_code</td>
+<td>该组可以使用的支付方式标志</td>
+</tr>
+<tr>
+<td>payment_group_description</td>
+<td>数组，支付组描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.customer_group_description数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>支付组名字</td>
+</tr>
+<tr>
+<td>description</td>
+<td>支付组描述</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="address" name="address"><a name="address" class="blank_anchor_name"></a><span id="api-address">Address</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/address</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>address_id</td>
+<td>Y</td>
+<td>地址id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no": 0,
+    "msg": "success",
+    "info": {
+        "address_id": "1",
+        "customer_id": "1",
+        "firstname": "Jan",
+        "lastname": "Wichrowski",
+        "company": "Pownua Tube",
+        "address_1": "62-1400 Bristol Rd. W",
+        "address_2": "",
+        "city": "Mississauga",
+        "postcode": "L5V 2A4",
+        "country_id": "38",
+        "zone_id": "610",
+        "custom_field": [
+            {
+                "custom_field_id": "1",
+                "value": "http: //",
+                "address_field_description": [
+                    {
+                        "language_id": "1",
+                        "name": "Amazon Profile"
+                    }
+                ]
+            }
+        ],
+        "phone": "905 858 1439",
+        "vat_id": "",
+        "customer_group_id": "1"
+    },
+    "lists": [
+    ]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>address_id</td>
+<td>地址id</td>
+</tr>
+<tr>
+<td>customer_group_id</td>
+<td>客户组id</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>客户id</td>
+</tr>
+<tr>
+<td>firstname</td>
+<td>名字</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>姓</td>
+</tr>
+<tr>
+<td>company</td>
+<td>公司名</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>联系电话</td>
+</tr>
+<tr>
+<td>address_1</td>
+<td>地址1</td>
+</tr>
+<tr>
+<td>address_2</td>
+<td>地址2</td>
+</tr>
+<tr>
+<td>city</td>
+<td>城市</td>
+</tr>
+<tr>
+<td>postcode</td>
+<td>邮编</td>
+</tr>
+<tr>
+<td>country_id</td>
+<td>国客id</td>
+</tr>
+<tr>
+<td>zone_id</td>
+<td>地区id</td>
+</tr>
+<tr>
+<td>custom_field</td>
+<td>数组，自定义客户信息</td>
+</tr>
+<tr>
+<td>vat_id</td>
+<td>增值税id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.custom_field数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>customer_field_description</td>
+<td>数组，名称</td>
+</tr>
+<tr>
+<td>value</td>
+<td>数据值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.customer_field_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>字段标题</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="order" name="order"><a name="order" class="blank_anchor_name"></a><span id="api-order">order</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/order</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>Y</td>
+<td>订单id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success."
+    , "info":{
+        "order_id":""
+        , "invoice_no":""
+        , "invoice_prefix":""
+        , "store_id":""
+        , "store_name":""
+        , "store_url":""
+        , "customer_id":""
+        , "firstname":""
+        , "lastname":""
+        , "email":""
+        , "telephone":""
+        , "fax":""
+        , "custom_field":""
+        , "payment_firstname":""
+        , "payment_lastname":""
+        , "payment_company":""
+        , "payment_address_1":""
+        , "payment_address_2":""
+        , "payment_postcode":""
+        , "payment_city":""
+        , "payment_zone_id":""
+        , "payment_zone":""
+        , "payment_zone_code":""
+        , "payment_country_id":""
+        , "payment_country":""
+        , "payment_iso_code_2":""
+        , "payment_iso_code_3":""
+        , "payment_address_format":""
+        , "payment_custom_field":""
+        , "payment_method":""
+        , "payment_code":""
+        , "shipping_firstname":""
+        , "shipping_lastname":""
+        , "shipping_company":""
+        , "shipping_address_1":""
+        , "shipping_address_2":""
+        , "shipping_postcode":""
+        , "shipping_city":""
+        , "shipping_zone_id":""
+        , "shipping_zone"
+        , ,"shipping_zone_code":""
+        , "shipping_country_id":""
+        , "shipping_country":""
+        , "shipping_iso_code_2":""
+        , "shipping_iso_code_3":""
+        , "shipping_address_format":""
+        , "shipping_custom_field":""
+        , "shipping_method":""
+        , "shipping_code":""
+        , "comment":""
+        , "total":""
+        , "order_status_id":""
+        , "order_status":""
+        , "affiliate_id":""
+        , "commission":""
+        , "language_id":""
+        , "language_code":""
+        , "language_directory":""
+        , "currency_id":""
+        , "currency_code":""
+        , "currency_value":""
+        , "ip":""
+        , "forwarded_ip":""
+        , "user_agent":""
+        , "accept_language":""
+        , "date_modified":""
+        , "date_added":""
+        , "products":[{
+            "product_id":""
+            , "name":""
+            , "model":""
+            , "sku":""
+            , "quantity":""
+            , "price":""
+            , "total":""
+            , "tax":""
+            , "reward":""
+            , "options":[{
+                "name":"Color"
+                , "value":"Black"
+            }]
+        }]
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"no data"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>订单id</td>
+</tr>
+<tr>
+<td>invoice_no</td>
+<td>收据编号</td>
+</tr>
+<tr>
+<td>invoice_prefix</td>
+<td>收据前缀</td>
+</tr>
+<tr>
+<td>store_id</td>
+<td>店铺id</td>
+</tr>
+<tr>
+<td>store_name</td>
+<td>店铺名</td>
+</tr>
+<tr>
+<td>store_url</td>
+<td>店铺url</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>客户id</td>
+</tr>
+<tr>
+<td>customer_group_id</td>
+<td>客户组id，参考<a href="#api-customer-group-lists">api/v2/customer_group/lists</a></td>
+</tr>
+<tr>
+<td>firstname</td>
+<td>客户名</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>客户姓</td>
+</tr>
+<tr>
+<td>email</td>
+<td>客户邮箱</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>客户电话</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>客户传真</td>
+</tr>
+<tr>
+<td>custom_field</td>
+<td>数组，客户自定义字段，参考<a href="#api-custom-field-lists">api/v2/custom_field/lists</a></td>
+</tr>
+<tr>
+<td>payment_firstname</td>
+<td>付款人姓</td>
+</tr>
+<tr>
+<td>payment_lastname</td>
+<td>付款人名</td>
+</tr>
+<tr>
+<td>payment_company</td>
+<td>付款的公司名</td>
+</tr>
+<tr>
+<td>payment_address_1</td>
+<td>付款地址1</td>
+</tr>
+<tr>
+<td>payment_address_2</td>
+<td>付款地址2</td>
+</tr>
+<tr>
+<td>payment_postcode</td>
+<td>付款地址邮编</td>
+</tr>
+<tr>
+<td>payment_city</td>
+<td>付款地址的城市</td>
+</tr>
+<tr>
+<td>payment_zone_id</td>
+<td>付款区域id，参考<a href="#api-zone-lists">api/v2/zone/lists</a></td>
+</tr>
+<tr>
+<td>payment_zone</td>
+<td>付款区域</td>
+</tr>
+<tr>
+<td>payment_zone_code</td>
+<td>付款区域编码</td>
+</tr>
+<tr>
+<td>payment_country_id</td>
+<td>付款国家id，参考<a href="#api-country-lists">api/v2/country/lists</a></td>
+</tr>
+<tr>
+<td>payment_country</td>
+<td>付款国家</td>
+</tr>
+<tr>
+<td>payment_address_format</td>
+<td>付款地址格式</td>
+</tr>
+<tr>
+<td>payment_custom_field</td>
+<td>数组，付款自定义的字段</td>
+</tr>
+<tr>
+<td>payment_method</td>
+<td>付款方式名称，参考<a href="#api-payment-lists">api/v2/payment/lists</a></td>
+</tr>
+<tr>
+<td>payment_code</td>
+<td>付款方式编码，参考<a href="#api-payment-lists">api/v2/payment/lists</a></td>
+</tr>
+<tr>
+<td>shipping_firstname</td>
+<td>收件人名</td>
+</tr>
+<tr>
+<td>shipping_lastname</td>
+<td>收件人姓</td>
+</tr>
+<tr>
+<td>shipping_company</td>
+<td>收件人公司名</td>
+</tr>
+<tr>
+<td>shipping_address_1</td>
+<td>收件地址1</td>
+</tr>
+<tr>
+<td>shipping_address_2</td>
+<td>收件地址2</td>
+</tr>
+<tr>
+<td>shipping_postcode</td>
+<td>收件地址邮编</td>
+</tr>
+<tr>
+<td>shipping_city</td>
+<td>收件地址的城市</td>
+</tr>
+<tr>
+<td>shipping_zone_id</td>
+<td>收件区域id，参考<a href="#api-zone-lists">api/v2/zone/lists</a></td>
+</tr>
+<tr>
+<td>shipping_zone</td>
+<td>收件区域</td>
+</tr>
+<tr>
+<td>shipping_zone_code</td>
+<td>收件区域编码，参考<a href="#api-zone-lists">api/v2/zone/lists</a></td>
+</tr>
+<tr>
+<td>shipping_country_id</td>
+<td>收件国家id，参考<a href="#api-country-lists">api/v2/country/lists</a></td>
+</tr>
+<tr>
+<td>shipping_country</td>
+<td>收件国家</td>
+</tr>
+<tr>
+<td>shipping_address_format</td>
+<td>收件地址格式</td>
+</tr>
+<tr>
+<td>shipping_custom_field</td>
+<td>数组，收件自定义字段</td>
+</tr>
+<tr>
+<td>shipping_method</td>
+<td>运输方式名称,参考 <a href="#api-shipping-lists">api/v2/shipping/lists</a></td>
+</tr>
+<tr>
+<td>shipping_code</td>
+<td>运输方式编码,参考 <a href="#api-shipping-lists">api/v2/shipping/lists</a></td>
+</tr>
+<tr>
+<td>comment</td>
+<td>备注</td>
+</tr>
+<tr>
+<td>courier</td>
+<td>运送代理</td>
+</tr>
+<tr>
+<td>tracking_number</td>
+<td>运送单号</td>
+</tr>
+<tr>
+<td>total</td>
+<td>总计</td>
+</tr>
+<tr>
+<td>paid_value</td>
+<td>完税价值</td>
+</tr>
+<tr>
+<td>order_status_id</td>
+<td>订单状态id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>语言，参考 <a href="#api-language-lists">api/v2/language/lists</a></td>
+</tr>
+<tr>
+<td>language_code</td>
+<td>语言编码</td>
+</tr>
+<tr>
+<td>language_name</td>
+<td>语言名称</td>
+</tr>
+<tr>
+<td>currency_id</td>
+<td>货币</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>货币编码</td>
+</tr>
+<tr>
+<td>currency_value</td>
+<td>货币值</td>
+</tr>
+<tr>
+<td>ip</td>
+<td>下单的ip</td>
+</tr>
+<tr>
+<td>forwarded_ip</td>
+<td>下单时的代理ip</td>
+</tr>
+<tr>
+<td>user_agent</td>
+<td>浏览器信息</td>
+</tr>
+<tr>
+<td>accept_language</td>
+<td>可接受的语言</td>
+</tr>
+<tr>
+<td>date_modified</td>
+<td>修改日期</td>
+</tr>
+<tr>
+<td>date_modified_unixtime</td>
+<td>修改日期，unixtime格式</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td>添加日期</td>
+</tr>
+<tr>
+<td>date_added_unixtime</td>
+<td>添加日期，unixtime格式</td>
+</tr>
+<tr>
+<td>products</td>
+<td>订购的产品数据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.custom_field 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>customer_field_description</td>
+<td>数组，名称</td>
+</tr>
+<tr>
+<td>value</td>
+<td>数据值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.custom_field.customer_field_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>字段标题</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.payment_custom_field 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>customer_field_description</td>
+<td>数组，名称</td>
+</tr>
+<tr>
+<td>value</td>
+<td>数据值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.payment_custom_field.customer_field_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>字段标题</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.shipping_custom_field 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>customer_field_description</td>
+<td>数组，名称</td>
+</tr>
+<tr>
+<td>value</td>
+<td>数据值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.shipping_custom_field.customer_field_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_field_id</td>
+<td>字段id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>字段标题</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.products数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_id</td>
+<td>产品id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>产品名</td>
+</tr>
+<tr>
+<td>model</td>
+<td>型号</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>sku</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>数量</td>
+</tr>
+<tr>
+<td>price</td>
+<td>价格</td>
+</tr>
+<tr>
+<td>total</td>
+<td>总价</td>
+</tr>
+<tr>
+<td>tax</td>
+<td>支付税额</td>
+</tr>
+<tr>
+<td>reward</td>
+<td>积分数</td>
+</tr>
+<tr>
+<td>options</td>
+<td>选项</td>
+</tr>
+</tbody>
+</table>
+<p>** info.products.options 数据说明 **</p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_option_id</td>
+<td>产品选项id</td>
+</tr>
+<tr>
+<td>product_option_value_id</td>
+<td>产品选项值id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>value</td>
+<td>数据值</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="order20add" name="order20add"><a name="order20add" class="blank_anchor_name"></a><span id="api-order-add">order add</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/order/add</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer</td>
+<td>Y</td>
+<td>数组，客户的信息</td>
+</tr>
+<tr>
+<td>payment_address</td>
+<td>Y</td>
+<td>数组，帐单地址</td>
+</tr>
+<tr>
+<td>payment_code</td>
+<td>Y</td>
+<td>支付方式代码,参考 <a href="#api-payment-lsits">api/v2/payment/lists</a></td>
+</tr>
+<tr>
+<td>products</td>
+<td>Y</td>
+<td>数组，购买的产品</td>
+</tr>
+<tr>
+<td>shipping_address</td>
+<td>Y</td>
+<td>数组，如果是购买需要运输的产品将是必须的。如果不需要运输的产品，将不需要</td>
+</tr>
+<tr>
+<td>shipping_code</td>
+<td>Y</td>
+<td>运输方式，如果是购买需要运输的产品将是必须的。如果不需要运输的产品，将非必须，参考 <a href="#api-shipping-lsits">api/v2/shipping/lists</a></td>
+</tr>
+<tr>
+<td>vouchers</td>
+<td>N</td>
+<td>数组，现金卷</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>N</td>
+<td>备注</td>
+</tr>
+<tr>
+<td>order_status_id</td>
+<td>N</td>
+<td>订单状态</td>
+</tr>
+<tr>
+<td>pon</td>
+<td>N</td>
+<td>采购单号</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.customer参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_id</td>
+<td>N</td>
+<td>客户id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.payment_address参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>firstname</td>
+<td>Y</td>
+<td>付款人姓</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>Y</td>
+<td>付款人名</td>
+</tr>
+<tr>
+<td>company</td>
+<td>N</td>
+<td>付款的公司名</td>
+</tr>
+<tr>
+<td>address_1</td>
+<td>Y</td>
+<td>付款地址1</td>
+</tr>
+<tr>
+<td>address_2</td>
+<td>N</td>
+<td>付款地址2</td>
+</tr>
+<tr>
+<td>postcode</td>
+<td>Y</td>
+<td>付款地址邮编</td>
+</tr>
+<tr>
+<td>city</td>
+<td>Y</td>
+<td>付款地址的城市</td>
+</tr>
+<tr>
+<td>zone_id</td>
+<td>Y</td>
+<td>付款区域id</td>
+</tr>
+<tr>
+<td>country_id</td>
+<td>Y</td>
+<td>付款国家id</td>
+</tr>
+<tr>
+<td>address_format</td>
+<td>N</td>
+<td>付款地址格式</td>
+</tr>
+<tr>
+<td>custom_field</td>
+<td>N</td>
+<td>付款自定义的字段</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Y</td>
+<td>付款方式编码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.shipping_address参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>firstname</td>
+<td>Y</td>
+<td>收件人名</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>Y</td>
+<td>收件人姓</td>
+</tr>
+<tr>
+<td>company</td>
+<td>N</td>
+<td>收件人公司名</td>
+</tr>
+<tr>
+<td>address_1</td>
+<td>Y</td>
+<td>收件地址1</td>
+</tr>
+<tr>
+<td>address_2</td>
+<td>N</td>
+<td>收件地址2</td>
+</tr>
+<tr>
+<td>postcode</td>
+<td>Y</td>
+<td>收件地址邮编</td>
+</tr>
+<tr>
+<td>city</td>
+<td>Y</td>
+<td>收件地址的城市</td>
+</tr>
+<tr>
+<td>zone_id</td>
+<td>Y</td>
+<td>收件区域id</td>
+</tr>
+<tr>
+<td>country_id</td>
+<td>Y</td>
+<td>收件国家id</td>
+</tr>
+<tr>
+<td>address_format</td>
+<td>N</td>
+<td>收件地址格式</td>
+</tr>
+<tr>
+<td>custom_field</td>
+<td>N</td>
+<td>收件自定义字段</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.vouchers参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from_name</td>
+<td>Y</td>
+<td>发送人姓名</td>
+</tr>
+<tr>
+<td>from_email</td>
+<td>Y</td>
+<td>发送人邮箱</td>
+</tr>
+<tr>
+<td>to_name</td>
+<td>Y</td>
+<td>接收人的姓名</td>
+</tr>
+<tr>
+<td>to_email</td>
+<td>Y</td>
+<td>接收人的邮箱</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Y</td>
+<td>金额</td>
+</tr>
+<tr>
+<td>voucher_theme_id</td>
+<td>N</td>
+<td>类型</td>
+</tr>
+<tr>
+<td>message</td>
+<td>N</td>
+<td>信息</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.products数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_id</td>
+<td>Y</td>
+<td>产品id</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>Y</td>
+<td>数量</td>
+</tr>
+<tr>
+<td>options</td>
+<td>N</td>
+<td>选项</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.products.options 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_option_id</td>
+<td>Y</td>
+<td>产品选项id</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Y</td>
+<td>数据值,如果option是select,image,radio，即为product_option_value_id,如：products[0][options][value]=12,如果是checkbox，即系把product_option_value_id存在到列表中,如：products[0][options][value][]=12&amp;products[0][options][value][]=13。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "order_id":"123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>新增的order_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="order20edit" name="order20edit"><a name="order20edit" class="blank_anchor_name"></a><span id="api-order-edit">order edit</span></h3>
+<p><a href="#menu">TOP</a><br>
+取消编辑的接口，改为专用功能接口</p>
+<hr>
+<h3 id="order20lists" name="order20lists"><a name="order20lists" class="blank_anchor_name"></a><span id="api-order-lists">order lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/order/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>N</td>
+<td>当页页数，默认为1</td>
+</tr>
+<tr>
+<td>page_limit</td>
+<td>N</td>
+<td>每页的最大条数，默认为20，最大值为200</td>
+</tr>
+<tr>
+<td>show_detail</td>
+<td>N</td>
+<td>是否显示详细数据，为true时，显示订单的详细数据（字段内容参考<a href="#api-order">api/v2/order</a>）</td>
+</tr>
+<tr>
+<td>filter_customer_id</td>
+<td>N</td>
+<td>客户的id</td>
+</tr>
+<tr>
+<td>filter_email</td>
+<td>N</td>
+<td>邮箱筛选</td>
+</tr>
+<tr>
+<td>filter_telephone</td>
+<td>N</td>
+<td>电话筛选</td>
+</tr>
+<tr>
+<td>filter_order_status_id</td>
+<td>N</td>
+<td>订单状态</td>
+</tr>
+<tr>
+<td>filter_date_add_from</td>
+<td>N</td>
+<td>订单创建的时间开始，时间戳</td>
+</tr>
+<tr>
+<td>filter_date_add_to</td>
+<td>N</td>
+<td>订单创建的时间结束，时间戳</td>
+</tr>
+<tr>
+<td>filter_date_modified_from</td>
+<td>N</td>
+<td>订单编辑的时间开始，时间戳</td>
+</tr>
+<tr>
+<td>filter_date_modified_to</td>
+<td>N</td>
+<td>订单编辑的时间结束，时间戳</td>
+</tr>
+</tbody>
+</table>
+<p><em>php的时间戳只有10位，而java的时间戳为13位，这里的时间保留到秒位，所以提交的时间戳应该为：1457345718。而非1457345718000</em></p>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "total":''
+        , 'maxpage':''
+        , 'page':''
+        , 'per_page_number':''
+    }
+    , "list":[
+        {
+            "order_id":""
+            , "invoice_no":""
+            , "invoice_prefix":""
+            , "store_id":""
+            , "store_name":""
+            , "store_url":""
+            , "customer_id":""
+            , "firstname":""
+            , "lastname":""
+            , "email":""
+            , "telephone":""
+            , "fax":""
+            , "custom_field":""
+            , "payment_firstname":""
+            , "payment_lastname":""
+            , "payment_company":""
+            , "payment_address_1":""
+            , "payment_address_2":""
+            , "payment_postcode":""
+            , "payment_city":""
+            , "payment_zone_id":""
+            , "payment_zone":""
+            , "payment_zone_code":""
+            , "payment_country_id":""
+            , "payment_country":""
+            , "payment_iso_code_2":""
+            , "payment_iso_code_3":""
+            , "payment_address_format":""
+            , "payment_custom_field":""
+            , "payment_method":""
+            , "payment_code":""
+            , "shipping_firstname":""
+            , "shipping_lastname":""
+            , "shipping_company":""
+            , "shipping_address_1":""
+            , "shipping_address_2":""
+            , "shipping_postcode":""
+            , "shipping_city":""
+            , "shipping_zone_id":""
+            , "shipping_zone"
+            , ,"shipping_zone_code":""
+            , "shipping_country_id":""
+            , "shipping_country":""
+            , "shipping_iso_code_2":""
+            , "shipping_iso_code_3":""
+            , "shipping_address_format":""
+            , "shipping_custom_field":""
+            , "shipping_method":""
+            , "shipping_code":""
+            , "comment":""
+            , "total":""
+            , "order_status_id":""
+            , "order_status":""
+            , "affiliate_id":""
+            , "commission":""
+            , "language_id":""
+            , "language_code":""
+            , "language_directory":""
+            , "currency_id":""
+            , "currency_code":""
+            , "currency_value":""
+            , "ip":""
+            , "forwarded_ip":""
+            , "user_agent":""
+            , "accept_language":""
+            , "date_modified":""
+            , "date_added":""
+        }
+    ]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>数据总条数</td>
+</tr>
+<tr>
+<td>cur_page</td>
+<td>当前的页号</td>
+</tr>
+<tr>
+<td>pre_page_num</td>
+<td>每页输出的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>订单id</td>
+</tr>
+<tr>
+<td>invoice_no</td>
+<td>收据编号</td>
+</tr>
+<tr>
+<td>invoice_prefix</td>
+<td>收据前缀</td>
+</tr>
+<tr>
+<td>store_id</td>
+<td>店铺id</td>
+</tr>
+<tr>
+<td>store_name</td>
+<td>店铺名</td>
+</tr>
+<tr>
+<td>store_url</td>
+<td>店铺url</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>客户id</td>
+</tr>
+<tr>
+<td>firstname</td>
+<td>客户名</td>
+</tr>
+<tr>
+<td>lastname</td>
+<td>客户姓</td>
+</tr>
+<tr>
+<td>email</td>
+<td>客户邮箱</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>客户电话</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>客户传真</td>
+</tr>
+<tr>
+<td>custom_field</td>
+<td>客户自定义字段</td>
+</tr>
+<tr>
+<td>payment_firstname</td>
+<td>付款人姓</td>
+</tr>
+<tr>
+<td>payment_lastname</td>
+<td>付款人名</td>
+</tr>
+<tr>
+<td>payment_company</td>
+<td>付款的公司名</td>
+</tr>
+<tr>
+<td>payment_address_1</td>
+<td>付款地址1</td>
+</tr>
+<tr>
+<td>payment_address_2</td>
+<td>付款地址2</td>
+</tr>
+<tr>
+<td>payment_postcode</td>
+<td>付款地址邮编</td>
+</tr>
+<tr>
+<td>payment_city</td>
+<td>付款地址的城市</td>
+</tr>
+<tr>
+<td>payment_zone_id</td>
+<td>付款区域id</td>
+</tr>
+<tr>
+<td>payment_zone</td>
+<td>付款区域</td>
+</tr>
+<tr>
+<td>payment_zone_code</td>
+<td>付款区域编码</td>
+</tr>
+<tr>
+<td>payment_country_id</td>
+<td>付款国家id</td>
+</tr>
+<tr>
+<td>payment_country</td>
+<td>付款国家</td>
+</tr>
+<tr>
+<td>payment_address_format</td>
+<td>付款地址格式</td>
+</tr>
+<tr>
+<td>payment_custom_field</td>
+<td>付款自定义的字段</td>
+</tr>
+<tr>
+<td>payment_method</td>
+<td>付款方式名称</td>
+</tr>
+<tr>
+<td>payment_code</td>
+<td>付款方式编码</td>
+</tr>
+<tr>
+<td>shipping_firstname</td>
+<td>收件人名</td>
+</tr>
+<tr>
+<td>shipping_lastname</td>
+<td>收件人姓</td>
+</tr>
+<tr>
+<td>shipping_company</td>
+<td>收件人公司名</td>
+</tr>
+<tr>
+<td>shipping_address_1</td>
+<td>收件地址1</td>
+</tr>
+<tr>
+<td>shipping_address_2</td>
+<td>收件地址2</td>
+</tr>
+<tr>
+<td>shipping_postcode</td>
+<td>收件地址邮编</td>
+</tr>
+<tr>
+<td>shipping_city</td>
+<td>收件地址的城市</td>
+</tr>
+<tr>
+<td>shipping_zone_id</td>
+<td>收件区域id</td>
+</tr>
+<tr>
+<td>shipping_zone</td>
+<td>收件区域</td>
+</tr>
+<tr>
+<td>shipping_zone_code</td>
+<td>收件区域编码</td>
+</tr>
+<tr>
+<td>shipping_country_id</td>
+<td>收件国家id</td>
+</tr>
+<tr>
+<td>shipping_country</td>
+<td>收件国家</td>
+</tr>
+<tr>
+<td>shipping_address_format</td>
+<td>收件地址格式</td>
+</tr>
+<tr>
+<td>shipping_custom_field</td>
+<td>收件自定义字段</td>
+</tr>
+<tr>
+<td>shipping_method</td>
+<td>运输方式名称</td>
+</tr>
+<tr>
+<td>shipping_code</td>
+<td>运输方式编码</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>备注</td>
+</tr>
+<tr>
+<td>total</td>
+<td>总计</td>
+</tr>
+<tr>
+<td>order_status_id</td>
+<td>订单状态id</td>
+</tr>
+<tr>
+<td>order_status</td>
+<td>订单状态</td>
+</tr>
+<tr>
+<td>affiliate_id</td>
+<td>推广id</td>
+</tr>
+<tr>
+<td>commission</td>
+<td>佣金</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>语言</td>
+</tr>
+<tr>
+<td>language_code</td>
+<td>语言编码</td>
+</tr>
+<tr>
+<td>language_directory</td>
+<td>语言目录</td>
+</tr>
+<tr>
+<td>currency_id</td>
+<td>货币</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>货币编码</td>
+</tr>
+<tr>
+<td>currency_value</td>
+<td>货币值</td>
+</tr>
+<tr>
+<td>ip</td>
+<td>下单的ip</td>
+</tr>
+<tr>
+<td>forwarded_ip</td>
+<td>下单时的代理ip</td>
+</tr>
+<tr>
+<td>user_agent</td>
+<td>代理信息</td>
+</tr>
+<tr>
+<td>accept_language</td>
+<td>可接受的语言</td>
+</tr>
+<tr>
+<td>date_modified</td>
+<td>修改日期</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td>添加日期</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="order20add20history" name="order20add20history"><a name="order20add20history" class="blank_anchor_name"></a><span id="api-order-addhistory">order add history</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/order/addhistory</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>Y</td>
+<td>订单id</td>
+</tr>
+<tr>
+<td>pon</td>
+<td>N</td>
+<td>采购单号，如果order_id小于等于0,将会使用pon和email或者customer_id查询order_id.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>N</td>
+<td>客户邮箱，如果order_id小于等于0,将会使用pon和email或者customer_id查询order_id.</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td>N</td>
+<td>客户id，如果order_id小于等于0,将会使用pon和email或者customer_id查询order_id.</td>
+</tr>
+<tr>
+<td>order_status_id</td>
+<td>Y</td>
+<td>订单状态id</td>
+</tr>
+<tr>
+<td>notify</td>
+<td>N</td>
+<td>是否通知客户，为1时通知</td>
+</tr>
+<tr>
+<td>override</td>
+<td>N</td>
+<td>是否覆盖，为1时覆盖</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>N</td>
+<td>备注</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{}
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong><br>
+无</p>
+<hr>
+<h3 id="order20fulfill" name="order20fulfill"><a name="order20fulfill" class="blank_anchor_name"></a><span id="api-order-fulfill">order fulfill</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/order/fulfill</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>Y</td>
+<td>订单id</td>
+</tr>
+<tr>
+<td>courier</td>
+<td>Y</td>
+<td>运送提供人</td>
+</tr>
+<tr>
+<td>tracking_number</td>
+<td>Y</td>
+<td>运送单号</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>N</td>
+<td>备注，如果tracking_number已经有数据，本项为必填</td>
+</tr>
+<tr>
+<td>order_status_id</td>
+<td>N</td>
+<td>订单状态</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "order_id":"123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_id</td>
+<td>操作的 order_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="order20status20lists" name="order20status20lists"><a name="order20status20lists" class="blank_anchor_name"></a><span id="api-order-status-lists">order status lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/order_status/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<p>无</p>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{}
+    , "list":[
+        {
+            "order_status_id":"1"
+            , "name":[
+                {
+                    "language_id":''
+                    , 'name':''
+                }
+            ]
+        }
+        //...
+    ]
+}
+</code></pre>
+<p><strong>list数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order_status_id</td>
+<td>状态id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>数组，状态名</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.name数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>选项名称</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="country20lists" name="country20lists"><a name="country20lists" class="blank_anchor_name"></a><span id="api-country-lists">country lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/country/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>N</td>
+<td>当页页数，默认为1</td>
+</tr>
+<tr>
+<td>page_limit</td>
+<td>N</td>
+<td>每页的最大条数，默认为20，最大值为200</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "total":''
+        , 'maxpage':''
+        , 'page':''
+        , 'per_page_number':''
+    }
+    , "list":[
+        {
+            "country_id":"1"
+            , "name":"0"
+            , "iso_code_2":"0"
+            , "iso_code_3":''
+            , "address_format":''
+            , "postcode_required":''
+            , "status":''
+        }
+    ]
+}
+</code></pre>
+<p><strong>info 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>数据总条数</td>
+</tr>
+<tr>
+<td>cur_page</td>
+<td>当前的页号</td>
+</tr>
+<tr>
+<td>pre_page_num</td>
+<td>每页输出的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>lists数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>country_id</td>
+<td>国家id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>国家名</td>
+</tr>
+<tr>
+<td>iso_code_2</td>
+<td>两位iso code</td>
+</tr>
+<tr>
+<td>iso_code_3</td>
+<td>三位iso code</td>
+</tr>
+<tr>
+<td>address_format</td>
+<td>地址格式</td>
+</tr>
+<tr>
+<td>postcode_required</td>
+<td>是否要求邮政编码</td>
+</tr>
+<tr>
+<td>status</td>
+<td>状态</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="zone20lists" name="zone20lists"><a name="zone20lists" class="blank_anchor_name"></a><span id="api-zone-lists">zone lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/zone/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>N</td>
+<td>当页页数，默认为1</td>
+</tr>
+<tr>
+<td>page_limit</td>
+<td>N</td>
+<td>每页的最大条数，默认为20，最大值为200</td>
+</tr>
+<tr>
+<td>filter_country_id</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "total":''
+        , 'maxpage':''
+        , 'page':''
+        , 'per_page_number':''
+    }
+    , "list":[
+        {
+            "zone_id":'1'
+            , "country_id":"1"
+            , "name":"0"
+            , "code":"0"
+            , "status":''
+        }
+    ]
+}
+</code></pre>
+<p><strong>info 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>数据总条数</td>
+</tr>
+<tr>
+<td>cur_page</td>
+<td>当前的页号</td>
+</tr>
+<tr>
+<td>pre_page_num</td>
+<td>每页输出的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>lists数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>country_id</td>
+<td>国家id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>地区名</td>
+</tr>
+<tr>
+<td>code</td>
+<td>编码</td>
+</tr>
+<tr>
+<td>status</td>
+<td>状态</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="shipping20lists" name="shipping20lists"><a name="shipping20lists" class="blank_anchor_name"></a><span id="api-shipping-lists">shipping lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/shipping/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong><br>
+无</p>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{}
+    , "list":[
+        {
+        "code":"flat"
+        }
+    ]
+}
+</code></pre>
+<p><strong>lists数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>编码</td>
+</tr>
+<tr>
+<td>method</td>
+<td>运输方式名称</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="payment20lists" name="payment20lists"><a name="payment20lists" class="blank_anchor_name"></a><span id="api-payment-lists">payment lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/payment/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong><br>
+无</p>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{}
+    , "list":[
+        {
+        "code":"flat"
+        , "method":"Flat Rate"
+        }
+    ]
+}
+</code></pre>
+<p><strong>lists数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>编码</td>
+</tr>
+<tr>
+<td>method</td>
+<td>支付方式的名称</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="product" name="product"><a name="product" class="blank_anchor_name"></a><span id="api-product">product</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/product</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_id</td>
+<td>Y</td>
+<td>产品id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+  "status_no": 0,
+  "msg": "success",
+  "info": {
+    "product_id": "175",
+    "model": "CE285A",
+    "sku": "GROH-CE285A-BZ01",
+    "upc": "",
+    "ean": "",
+    "jan": "",
+    "isbn": "",
+    "mpn": "",
+    "location": "",
+    "quantity": "995",
+    "stock_status_id": "7",
+    "image": "catalog/Toner/CE285A/GROH-CE285A-BZ01_1.jpg",
+    "manufacturer_id": "11",
+    "shipping": "1",
+    "price": "14.9900",
+    "points": "0",
+    "tax_class_id": "0",
+    "date_available": "2016-01-02",
+    "weight": "1.70000000",
+    "weight_class_id": "1",
+    "length": "13.20000000",
+    "width": "5.20000000",
+    "height": "4.40000000",
+    "length_class_id": "1",
+    "subtract": "1",
+    "minimum": "1",
+    "sort_order": "0",
+    "status": "1",
+    "viewed": "158",
+    "date_added": "2016-01-02 00:00:00",
+    "date_modified": "2016-03-30 10:58:29",
+    "is_hot": "0",
+    "keyword": "HP-CE285A-Toner-Cartridge-GROH-CE285A-BZ01",
+    "product_description": [
+      {
+        "language_id": "1",
+        "name": "Black Cartridge CE285A (85A) Laser Toner Compatible for HP LaserJet Pro P1102w, M1212nf - 1 Pack",
+        "short_description": "",
+        "description": "",
+        "tag": "Global Toner CE285A Toner Cartridge",
+        "meta_title": "Global Toner CE285A Toner Cartridge",
+        "meta_description": "Global Toner CE285A Toner Cartridge",
+        "meta_keyword": "Global Toner CE285A Toner Cartridge"
+      }
+    ],
+    "product_image": [
+      {
+        "product_image_id": "3480",
+        "product_id": "175",
+        "image": "catalog/Toner/CE285A/GROH-CE285A-BZ01_1.jpg",
+        "sort_order": "1"
+      }
+    ],
+    "product_attribute": [
+      {
+        "product_id": "175",
+        "attribute_id": "14",
+        "language_id": "1",
+        "text": "1 Pack Toner Cartridge (Black), 1 User Guide",
+        "attribute_group_id": "9",
+        "sort_order": "2",
+        "attribute_description": [
+          {
+            "attribute_id": "14",
+            "language_id": "1",
+            "name": "Package Includes"
+          }
+        ],
+        "attribute_group_description": [
+          {
+            "attribute_group_id": "9",
+            "language_id": "1",
+            "name": "Toner"
+          }
+        ]
+      }
+    ],
+    "product_option": [
+      {
+        "product_option_id": "1079",
+        "option_id": "14",
+        "value": "",
+        "required": "1",
+        "type": "radio",
+        "sort_order": "0",
+        "option_description": [
+          {
+            "language_id": "1",
+            "name": "Color"
+          }
+        ],
+        "product_option_value": [
+          {
+            "product_option_value_id": "1191",
+            "product_option_id": "1079",
+            "option_value_id": "49",
+            "quantity": "995",
+            "subtract": "1",
+            "price": "0.0000",
+            "price_prefix": "+",
+            "points": "0",
+            "points_prefix": "+",
+            "weight": "0.00000000",
+            "weight_prefix": "+",
+            "image": "catalog/K.png",
+            "sort_order": "1",
+            "product_option_value_description": [
+              {
+                "option_value_id": "49",
+                "language_id": "1",
+                "name": "Black"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "product_coupon": [
+      {
+        "id": "22",
+        "product_id": "175",
+        "name": "US",
+        "url": "http://www.amazon.com/dp/asdfasdfsdf",
+        "code": "123",
+        "price": "123123.0000",
+        "date_start": "2016-03-08",
+        "date_end": "2020-12-25"
+      }
+    ],
+    "product_category": [
+      {
+        "category_id": "1318",
+        "image": "",
+        "parent_id": "24",
+        "top": "0",
+        "column": "1",
+        "sort_order": "0",
+        "status": "1",
+        "date_added": "2015-12-28 11:09:00",
+        "date_modified": "2015-12-29 07:00:29",
+        "paths": "22,24,1318",
+        "category_description": [
+          {
+            "category_id": "1318",
+            "language_id": "1",
+            "name": "Laserjet Pro M1217nfw",
+            "description": "",
+            "meta_title": "Laserjet Pro M1217nfw",
+            "meta_description": "",
+            "meta_keyword": "",
+            "names": "HP Toner Cartridges&gt;LaserJet&gt;Laserjet Pro M1217nfw"
+          }
+        ]
+      }
+    ],
+    "product_related": [
+      {
+        "product_id": "175",
+        "related_id": "176",
+        "product_description": [
+          {
+            "language_id": "1",
+            "name": "Black Cartridge CE285A (85A) Laser Toner Compatible for HP LaserJet Pro P1102w, M1212nf - 2 Pack",
+            "short_description": "",
+            "description": "",
+            "tag": "Global Toner CE285A Toner Cartridge",
+            "meta_title": "Global Toner CE285A Toner Cartridge",
+            "meta_description": "Global Toner CE285A Toner Cartridge",
+            "meta_keyword": "Global Toner CE285A Toner Cartridge"
+          }
+        ]
+      }
+    ],
+    "product_cross": [
+      {
+        "product_id": "175",
+        "cross_id": "282",
+        "product_description": [
+          {
+            "language_id": "1",
+            "name": "3 Pack GlobalToner Compatible With Brother TN-360 TN-330 High Yield of 2600 Pages, Black Toner Cartridge Compatible With Brother DCP-7030 DCP-7040 HL-2140 HL-2170W MFC-7440N &amp; MFC-7840W Printers",
+            "short_description": "",
+            "description": "",
+            "tag": "Global Toner TN360 Toner Cartridge",
+            "meta_title": "Global Toner TN360 Toner Cartridge",
+            "meta_description": "Global Toner TN360 Toner Cartridge",
+            "meta_keyword": "Global Toner TN360 Toner Cartridge"
+          }
+        ]
+      }
+    ],
+    "product_upselling": [
+      {
+        "product_id": "175",
+        "upselling_id": "176",
+        "product_description": [
+          {
+            "language_id": "1",
+            "name": "Black Cartridge CE285A (85A) Laser Toner Compatible for HP LaserJet Pro P1102w, M1212nf - 2 Pack",
+            "short_description": "",
+            "description": "",
+            "tag": "Global Toner CE285A Toner Cartridge",
+            "meta_title": "Global Toner CE285A Toner Cartridge",
+            "meta_description": "Global Toner CE285A Toner Cartridge",
+            "meta_keyword": "Global Toner CE285A Toner Cartridge"
+          }
+        ]
+      }
+    ],
+    "product_filter": [
+      {
+        "filter_id": "4",
+        "filter_group_id": "2",
+        "sort_order": "1",
+        "filter_description": [
+          {
+            "filter_id": "4",
+            "language_id": "1",
+            "filter_group_id": "2",
+            "name": "LaserJet"
+          }
+        ],
+        "filter_group": {
+          "filter_group_id": "2",
+          "sort_order": "1",
+          "filter_group_description": [
+            {
+                "filter_group_id": "2",
+                "language_id": "1",
+                "name": "Printer Type"
+            }
+          ]
+        }
+      }
+    ],
+    "product_recurring": [
+      {
+        "product_id": "175",
+        "recurring_id": "1",
+        "customer_group_id": "1",
+        "recurring": {
+          "recurring_id": "1",
+          "price": "1.0000",
+          "frequency": "month",
+          "duration": "2",
+          "cycle": "6",
+          "trial_status": "1",
+          "trial_price": "1.0000",
+          "trial_frequency": "week",
+          "trial_duration": "1",
+          "trial_cycle": "1",
+          "status": "1",
+          "sort_order": "0",
+          "recurring_description": [
+            {
+              "recurring_id": "1",
+              "language_id": "1",
+              "name": "Recurring1"
+            }
+          ]
+        },
+        "customer_group": {
+          "customer_group_id": "1",
+          "approval": "1",
+          "sort_order": "0",
+          "customer_group_description": [
+            {
+              "customer_group_id": "1",
+              "language_id": "1",
+              "name": "Default",
+              "limitedDateCondition": "0000-00-00",
+              "limitedPaymetAmout": "0.00",
+              "description": "test"
+            }
+          ]
+        }
+      }
+    ],
+    "product_discount": [
+      {
+        "product_discount_id": "3",
+        "product_id": "175",
+        "customer_group_id": "4",
+        "quantity": "10",
+        "priority": "1",
+        "price": "1.0000",
+        "date_start": "2016-03-29",
+        "date_end": "2020-12-25",
+        "customer_group": {
+          "customer_group_id": "4",
+          "approval": "0",
+          "sort_order": "1",
+          "customer_group_description": [
+            {
+              "customer_group_id": "4",
+              "language_id": "1",
+              "name": "COD",
+              "limitedDateCondition": "0000-00-00",
+              "limitedPaymetAmout": "0.00",
+              "description": ""
+            }
+          ]
+        }
+      }
+    ],
+    "product_special": [
+      {
+        "product_special_id": "2",
+        "product_id": "175",
+        "customer_group_id": "4",
+        "priority": "1",
+        "price": "12.0000",
+        "date_start": "2012-12-25",
+        "date_end": "2020-12-25",
+        "customer_group": {
+          "customer_group_id": "4",
+          "approval": "0",
+          "sort_order": "1",
+          "customer_group_description": [
+            {
+              "customer_group_id": "4",
+              "language_id": "1",
+              "name": "COD",
+              "limitedDateCondition": "0000-00-00",
+              "limitedPaymetAmout": "0.00",
+              "description": ""
+            }
+          ]
+        }
+      }
+    ],
+    "product_reward": [
+      {
+        "product_reward_id": "3",
+        "product_id": "175",
+        "customer_group_id": "1",
+        "points": "1",
+        "customer_group": {
+          "customer_group_id": "1",
+          "approval": "1",
+          "sort_order": "0",
+          "customer_group_description": [
+            {
+              "customer_group_id": "1",
+              "language_id": "1",
+              "name": "Default",
+              "limitedDateCondition": "0000-00-00",
+              "limitedPaymetAmout": "0.00",
+              "description": "test"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "lists": []
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_id</td>
+<td>产品id</td>
+</tr>
+<tr>
+<td>model</td>
+<td>产品型号</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>产品sku</td>
+</tr>
+<tr>
+<td>upc</td>
+<td>通用产品代码</td>
+</tr>
+<tr>
+<td>ean</td>
+<td>欧洲商品编号</td>
+</tr>
+<tr>
+<td>jan</td>
+<td>日本商品号码</td>
+</tr>
+<tr>
+<td>isbn</td>
+<td>国际标准书号</td>
+</tr>
+<tr>
+<td>mpn</td>
+<td>制造商零件编号</td>
+</tr>
+<tr>
+<td>location</td>
+<td>产地</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>数据</td>
+</tr>
+<tr>
+<td>stock_status_id</td>
+<td>库存状态id</td>
+</tr>
+<tr>
+<td>stock_status</td>
+<td>库存状态</td>
+</tr>
+<tr>
+<td>image</td>
+<td>产品首图</td>
+</tr>
+<tr>
+<td>manufacturer</td>
+<td>生产商</td>
+</tr>
+<tr>
+<td>shipping</td>
+<td>是否需要运输</td>
+</tr>
+<tr>
+<td>price</td>
+<td>价格</td>
+</tr>
+<tr>
+<td>points</td>
+<td>购买产品需要的点数</td>
+</tr>
+<tr>
+<td>tax_class_id</td>
+<td>计税方式id</td>
+</tr>
+<tr>
+<td>tax_class</td>
+<td>计税方式名称</td>
+</tr>
+<tr>
+<td>date_available</td>
+<td>生效日期</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>重量</td>
+</tr>
+<tr>
+<td>weight_class</td>
+<td>重量单位</td>
+</tr>
+<tr>
+<td>length</td>
+<td>长度</td>
+</tr>
+<tr>
+<td>width</td>
+<td>宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>高度</td>
+</tr>
+<tr>
+<td>length_class</td>
+<td>长度单位</td>
+</tr>
+<tr>
+<td>subtract</td>
+<td>是否自动扣减库存</td>
+</tr>
+<tr>
+<td>minimum</td>
+<td>最小购买数量</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>订单排序</td>
+</tr>
+<tr>
+<td>status</td>
+<td>产品状态</td>
+</tr>
+<tr>
+<td>viewed</td>
+<td>查看数</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td>添加时间</td>
+</tr>
+<tr>
+<td>date_modified</td>
+<td>修改时间</td>
+</tr>
+<tr>
+<td>is_hot</td>
+<td>是否热销产品</td>
+</tr>
+<tr>
+<td>product_description</td>
+<td>数组，产品相关介绍</td>
+</tr>
+<tr>
+<td>product_option</td>
+<td>数组，产品购买选项</td>
+</tr>
+<tr>
+<td>product_attribut</td>
+<td>i 数组，产品的属性</td>
+</tr>
+<tr>
+<td>product_image</td>
+<td>数组，图片地址（相对路径）</td>
+</tr>
+<tr>
+<td>product_coupon</td>
+<td>数组，站外的产品coupon</td>
+</tr>
+<tr>
+<td>product_category</td>
+<td>数组，产品分类</td>
+</tr>
+<tr>
+<td>product_related</td>
+<td>数组，相关产品</td>
+</tr>
+<tr>
+<td>product_cross</td>
+<td>数组，交叉产品</td>
+</tr>
+<tr>
+<td>product_upselling</td>
+<td>数组，相关的热销产品</td>
+</tr>
+<tr>
+<td>product_filter</td>
+<td>数组，产品的过滤项</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>产品名</td>
+</tr>
+<tr>
+<td>short_description</td>
+<td>产品短描述</td>
+</tr>
+<tr>
+<td>description</td>
+<td>产品描述</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>标签</td>
+</tr>
+<tr>
+<td>meta_title</td>
+<td>产品详细页的meta标题</td>
+</tr>
+<tr>
+<td>meta_description</td>
+<td>产品详细页的meta描述</td>
+</tr>
+<tr>
+<td>meta_keyword</td>
+<td>产品详细页的meta关键字</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_option 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_id</td>
+<td>选项id</td>
+</tr>
+<tr>
+<td>type</td>
+<td>选项类型，:Select,Radio,Checkbox,Image,Text,Textarea,File,Date,Time</td>
+</tr>
+<tr>
+<td>option_description</td>
+<td>数组，选项的名称</td>
+</tr>
+<tr>
+<td>value</td>
+<td>选项值</td>
+</tr>
+<tr>
+<td>required</td>
+<td>是否必选</td>
+</tr>
+<tr>
+<td>product_option_value</td>
+<td>数组，如果option值，目前只有Select,Radio,Checkbox,Image会有该值。其它将为空数组</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_option.option_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>选项名称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_option.product_option_value 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_value_id</td>
+<td>选项值的id</td>
+</tr>
+<tr>
+<td>image</td>
+<td>选项值的图片</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>选项值的排序</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>数量</td>
+</tr>
+<tr>
+<td>subtract</td>
+<td>是否扣减库存</td>
+</tr>
+<tr>
+<td>price</td>
+<td>价格变化量</td>
+</tr>
+<tr>
+<td>price_prefix</td>
+<td>价格增加或减少</td>
+</tr>
+<tr>
+<td>points</td>
+<td>点数变化量</td>
+</tr>
+<tr>
+<td>points_prefix</td>
+<td>点数增加或减少</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>重量变化量</td>
+</tr>
+<tr>
+<td>weight_prefix</td>
+<td>重量增加或减少</td>
+</tr>
+<tr>
+<td>option_value_description</td>
+<td>数组，选项值的描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_option.product_option_value.option_value_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>选项值名称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_attribute 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_id</td>
+<td>属性值id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>text</td>
+<td>属性值</td>
+</tr>
+<tr>
+<td>attribute_group_id</td>
+<td>属性组id</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>属性的排序号</td>
+</tr>
+<tr>
+<td>attribute_group_description</td>
+<td>数组，属性组描述</td>
+</tr>
+<tr>
+<td>attribute_description</td>
+<td>数组，属性描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_attribute.attribute_group_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>属性组名称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_attribute.attribute_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>属性名称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_image 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>图片路径</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_coupon 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>url</td>
+<td>外网站url</td>
+</tr>
+<tr>
+<td>code</td>
+<td>优惠码</td>
+</tr>
+<tr>
+<td>price</td>
+<td>折后价格</td>
+</tr>
+<tr>
+<td>date_start</td>
+<td>开始日期</td>
+</tr>
+<tr>
+<td>date_end</td>
+<td>结束日期</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_category 数据说明</strong><br>
+参考 <a href="#api-category-info">api/v2/category 的info数据</a></p>
+<p><strong>info.product_related数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>related_id</td>
+<td>相关产品的id</td>
+</tr>
+<tr>
+<td>product_description</td>
+<td>数组，产品的描述，参考 <a href="#api-category-info-product_description">api/v2/category 的info.product_description 数据</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_cross数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cross_id</td>
+<td>交叉产品的id</td>
+</tr>
+<tr>
+<td>product_description</td>
+<td>数组，产品的描述，参考 <a href="#api-category-info-product_description">api/v2/category 的info.product_description 数据</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_upselling数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>upselling_id</td>
+<td>热销产品的id</td>
+</tr>
+<tr>
+<td>product_description</td>
+<td>数组，产品的描述，参考 <a href="#api-category-info-product_description">api/v2/category 的info.product_description 数据</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_filter数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filter_id</td>
+<td>过滤项的id</td>
+</tr>
+<tr>
+<td>filter_group_id</td>
+<td>过滤项分组id</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>filter_description</td>
+<td>数组，过滤器描述</td>
+</tr>
+<tr>
+<td>filter_group_description</td>
+<td>数组，过滤器分组描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_filter.filter_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>namq</td>
+<td>名称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.product_filter.filter_group_description 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>namq</td>
+<td>名称</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="product20add" name="product20add"><a name="product20add" class="blank_anchor_name"></a><span id="api-product-add">product add</span></h3>
+<p><a href="#menu">TOP</a></p>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/product/add</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p>** data 参数**</p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>model</td>
+<td>Y</td>
+<td>产品型号</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>Y</td>
+<td>产品sku</td>
+</tr>
+<tr>
+<td>upc</td>
+<td>N</td>
+<td>通用产品代码</td>
+</tr>
+<tr>
+<td>ean</td>
+<td>N</td>
+<td>欧洲商品编号</td>
+</tr>
+<tr>
+<td>jan</td>
+<td>N</td>
+<td>日本商品号码</td>
+</tr>
+<tr>
+<td>isbn</td>
+<td>N</td>
+<td>国际标准书号</td>
+</tr>
+<tr>
+<td>mpn</td>
+<td>N</td>
+<td>制造商零件编号</td>
+</tr>
+<tr>
+<td>location</td>
+<td>N</td>
+<td>产地</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>N</td>
+<td>数据</td>
+</tr>
+<tr>
+<td>stock_status_id</td>
+<td>N</td>
+<td>库存状态id</td>
+</tr>
+<tr>
+<td>stock_status</td>
+<td>N</td>
+<td>库存状态</td>
+</tr>
+<tr>
+<td>image</td>
+<td>N</td>
+<td>产品首图</td>
+</tr>
+<tr>
+<td>manufacturer</td>
+<td>N</td>
+<td>生产商</td>
+</tr>
+<tr>
+<td>shipping</td>
+<td>N</td>
+<td>是否需要运输</td>
+</tr>
+<tr>
+<td>price</td>
+<td>N</td>
+<td>价格</td>
+</tr>
+<tr>
+<td>points</td>
+<td>N</td>
+<td>购买产品需要的点数</td>
+</tr>
+<tr>
+<td>tax_class_id</td>
+<td>N</td>
+<td>计税方式id</td>
+</tr>
+<tr>
+<td>tax_class</td>
+<td>N</td>
+<td>计税方式名称</td>
+</tr>
+<tr>
+<td>date_available</td>
+<td>N</td>
+<td>生效日期</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>N</td>
+<td>重量</td>
+</tr>
+<tr>
+<td>weight_class</td>
+<td>N</td>
+<td>重量单位</td>
+</tr>
+<tr>
+<td>length</td>
+<td>N</td>
+<td>长度</td>
+</tr>
+<tr>
+<td>width</td>
+<td>N</td>
+<td>宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>N</td>
+<td>高度</td>
+</tr>
+<tr>
+<td>length_class</td>
+<td>N</td>
+<td>长度单位</td>
+</tr>
+<tr>
+<td>subtract</td>
+<td>N</td>
+<td>是否自动扣减库存</td>
+</tr>
+<tr>
+<td>minimum</td>
+<td>N</td>
+<td>最小购买数量</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>N</td>
+<td>订单排序</td>
+</tr>
+<tr>
+<td>status</td>
+<td>N</td>
+<td>产品状态</td>
+</tr>
+<tr>
+<td>viewed</td>
+<td>N</td>
+<td>查看数</td>
+</tr>
+<tr>
+<td>is_hot</td>
+<td>N</td>
+<td>是否热销产品</td>
+</tr>
+<tr>
+<td>product_description</td>
+<td>N</td>
+<td>数组，产品相关介绍，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_option</td>
+<td>N</td>
+<td>数组，产品购买选项，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_attribut</td>
+<td>N</td>
+<td>数组，产品的属性，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_image</td>
+<td>N</td>
+<td>数组，产品的图片，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_coupon</td>
+<td>N</td>
+<td>数组，产品的站外优惠，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_category</td>
+<td>N</td>
+<td>数组，产品的分类，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_related</td>
+<td>N</td>
+<td>数组，相关产品，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_cross</td>
+<td>N</td>
+<td>数组，交叉产品，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_upselling</td>
+<td>N</td>
+<td>数组，热销产品，不提交时将不会插入。</td>
+</tr>
+<tr>
+<td>product_filter</td>
+<td>N</td>
+<td>数组，过滤条件，不提交时将不会插入。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_description 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>产品名</td>
+</tr>
+<tr>
+<td>short_description</td>
+<td>N</td>
+<td>产品短描述</td>
+</tr>
+<tr>
+<td>description</td>
+<td>N</td>
+<td>产品描述</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>N</td>
+<td>标签</td>
+</tr>
+<tr>
+<td>meta_title</td>
+<td>Y</td>
+<td>产品详细页的meta标题</td>
+</tr>
+<tr>
+<td>meta_description</td>
+<td>N</td>
+<td>产品详细页的meta描述</td>
+</tr>
+<tr>
+<td>meta_keyword</td>
+<td>N</td>
+<td>产品详细页的meta关键字</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_option 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_id</td>
+<td>Y</td>
+<td>选项id</td>
+</tr>
+<tr>
+<td>value</td>
+<td>N</td>
+<td>选项值</td>
+</tr>
+<tr>
+<td>required</td>
+<td>N</td>
+<td>是否必选</td>
+</tr>
+<tr>
+<td>product_option_value</td>
+<td>N</td>
+<td>数组，如果option值，目前只有Select,Radio,Checkbox,Image为必选值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_option.product_option_value 参数</strong><br>
+---|---|---<br>
+option_value_id |Y| 选项值的id<br>
+quantity |N| 数量<br>
+subtract |N| 是否扣减库存<br>
+price |N| 价格变化量<br>
+price_prefix |N| 价格增加或减少<br>
+points |N| 点数变化量<br>
+points_prefix |N| 点数增加或减少<br>
+weight |N| 重量变化量<br>
+weight_prefix |N| 重量增加或减少</p>
+<p><strong>data.product_attribute 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_id</td>
+<td>Y</td>
+<td>属性值id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>text</td>
+<td>N</td>
+<td>数组，属性的内容</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_image 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>Y</td>
+<td>图片的相对路径</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>N</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_coupon 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>N</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>url</td>
+<td>N</td>
+<td>站外url</td>
+</tr>
+<tr>
+<td>code</td>
+<td>N</td>
+<td>优惠代码</td>
+</tr>
+<tr>
+<td>price</td>
+<td>N</td>
+<td>价格</td>
+</tr>
+<tr>
+<td>date_start</td>
+<td>N</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>date_end</td>
+<td>N</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_category 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_id</td>
+<td>Y</td>
+<td>分类id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_related 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>related_id</td>
+<td>Y</td>
+<td>相关的产品id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_cross 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cross_id</td>
+<td>Y</td>
+<td>交叉产品id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_upselling 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>upselling_id</td>
+<td>Y</td>
+<td>热销产品id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_filter 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filter_id</td>
+<td>Y</td>
+<td>过滤条件的id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "product_id":"123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_id</td>
+<td>新增的product_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="product20edit" name="product20edit"><a name="product20edit" class="blank_anchor_name"></a><span id="api-product-edit">product edit</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/product/edit</p>
+<p>POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p>** data 参数**</p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_id</td>
+<td>Y</td>
+<td>产品id</td>
+</tr>
+<tr>
+<td>model</td>
+<td>Y</td>
+<td>产品型号</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>Y</td>
+<td>产品sku</td>
+</tr>
+<tr>
+<td>upc</td>
+<td>N</td>
+<td>通用产品代码</td>
+</tr>
+<tr>
+<td>ean</td>
+<td>N</td>
+<td>欧洲商品编号</td>
+</tr>
+<tr>
+<td>jan</td>
+<td>N</td>
+<td>日本商品号码</td>
+</tr>
+<tr>
+<td>isbn</td>
+<td>N</td>
+<td>国际标准书号</td>
+</tr>
+<tr>
+<td>mpn</td>
+<td>N</td>
+<td>制造商零件编号</td>
+</tr>
+<tr>
+<td>location</td>
+<td>N</td>
+<td>产地</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>N</td>
+<td>数据</td>
+</tr>
+<tr>
+<td>stock_status_id</td>
+<td>N</td>
+<td>库存状态id</td>
+</tr>
+<tr>
+<td>stock_status</td>
+<td>N</td>
+<td>库存状态</td>
+</tr>
+<tr>
+<td>image</td>
+<td>N</td>
+<td>产品首图</td>
+</tr>
+<tr>
+<td>manufacturer</td>
+<td>N</td>
+<td>生产商</td>
+</tr>
+<tr>
+<td>shipping</td>
+<td>N</td>
+<td>是否需要运输</td>
+</tr>
+<tr>
+<td>price</td>
+<td>N</td>
+<td>价格</td>
+</tr>
+<tr>
+<td>points</td>
+<td>N</td>
+<td>购买产品需要的点数</td>
+</tr>
+<tr>
+<td>tax_class_id</td>
+<td>N</td>
+<td>计税方式id</td>
+</tr>
+<tr>
+<td>tax_class</td>
+<td>N</td>
+<td>计税方式名称</td>
+</tr>
+<tr>
+<td>date_available</td>
+<td>N</td>
+<td>生效日期</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>N</td>
+<td>重量</td>
+</tr>
+<tr>
+<td>weight_class</td>
+<td>N</td>
+<td>重量单位</td>
+</tr>
+<tr>
+<td>length</td>
+<td>N</td>
+<td>长度</td>
+</tr>
+<tr>
+<td>width</td>
+<td>N</td>
+<td>宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>N</td>
+<td>高度</td>
+</tr>
+<tr>
+<td>length_class</td>
+<td>N</td>
+<td>长度单位</td>
+</tr>
+<tr>
+<td>subtract</td>
+<td>N</td>
+<td>是否自动扣减库存</td>
+</tr>
+<tr>
+<td>minimum</td>
+<td>N</td>
+<td>最小购买数量</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>N</td>
+<td>订单排序</td>
+</tr>
+<tr>
+<td>status</td>
+<td>N</td>
+<td>产品状态</td>
+</tr>
+<tr>
+<td>viewed</td>
+<td>N</td>
+<td>查看数</td>
+</tr>
+<tr>
+<td>is_hot</td>
+<td>N</td>
+<td>是否热销产品</td>
+</tr>
+<tr>
+<td>product_description</td>
+<td>N</td>
+<td>数组，产品相关介绍，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_option</td>
+<td>N</td>
+<td>数组，产品购买选项，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_attribut</td>
+<td>N</td>
+<td>数组，产品的属性，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_image</td>
+<td>N</td>
+<td>数组，产品的图片，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_coupon</td>
+<td>N</td>
+<td>数组，产品的站外优惠，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_category</td>
+<td>N</td>
+<td>数组，产品的分类，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_related</td>
+<td>N</td>
+<td>数组，相关产品，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_cross</td>
+<td>N</td>
+<td>数组，交叉产品，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_upselling</td>
+<td>N</td>
+<td>数组，热销产品，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+<tr>
+<td>product_filter</td>
+<td>N</td>
+<td>数组，过滤条件，不提交时将不会更新。更新时，将会删除原来的数据，再增加新的数据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_description 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>产品名</td>
+</tr>
+<tr>
+<td>short_description</td>
+<td>N</td>
+<td>产品短描述</td>
+</tr>
+<tr>
+<td>description</td>
+<td>N</td>
+<td>产品描述</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>N</td>
+<td>标签</td>
+</tr>
+<tr>
+<td>meta_title</td>
+<td>Y</td>
+<td>产品详细页的meta标题</td>
+</tr>
+<tr>
+<td>meta_description</td>
+<td>N</td>
+<td>产品详细页的meta描述</td>
+</tr>
+<tr>
+<td>meta_keyword</td>
+<td>N</td>
+<td>产品详细页的meta关键字</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_option 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_id</td>
+<td>Y</td>
+<td>选项id</td>
+</tr>
+<tr>
+<td>value</td>
+<td>N</td>
+<td>选项值</td>
+</tr>
+<tr>
+<td>required</td>
+<td>N</td>
+<td>是否必选</td>
+</tr>
+<tr>
+<td>product_option_value</td>
+<td>N</td>
+<td>数组，如果option值，目前只有Select,Radio,Checkbox,Image为必选值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_option.product_option_value 参数</strong><br>
+---|---|---<br>
+option_value_id |Y| 选项值的id<br>
+quantity |N| 数量<br>
+subtract |N| 是否扣减库存<br>
+price |N| 价格变化量<br>
+price_prefix |N| 价格增加或减少<br>
+points |N| 点数变化量<br>
+points_prefix |N| 点数增加或减少<br>
+weight |N| 重量变化量<br>
+weight_prefix |N| 重量增加或减少</p>
+<p><strong>data.product_attribute 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_id</td>
+<td>Y</td>
+<td>属性值id</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>text</td>
+<td>N</td>
+<td>数组，属性的内容</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_image 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>Y</td>
+<td>图片的相对路径</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>N</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_coupon 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>N</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>url</td>
+<td>N</td>
+<td>站外url</td>
+</tr>
+<tr>
+<td>code</td>
+<td>N</td>
+<td>优惠代码</td>
+</tr>
+<tr>
+<td>price</td>
+<td>N</td>
+<td>价格</td>
+</tr>
+<tr>
+<td>date_start</td>
+<td>N</td>
+<td>开始时间</td>
+</tr>
+<tr>
+<td>date_end</td>
+<td>N</td>
+<td>结束时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_category 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_id</td>
+<td>Y</td>
+<td>分类id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_related 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>related_id</td>
+<td>Y</td>
+<td>相关的产品id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_cross 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cross_id</td>
+<td>Y</td>
+<td>交叉产品id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_upselling 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>upselling_id</td>
+<td>Y</td>
+<td>热销产品id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.product_filter 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filter_id</td>
+<td>Y</td>
+<td>过滤条件的id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "product_id":"123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_id</td>
+<td>编辑的product_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="product20delete" name="product20delete"><a name="product20delete" class="blank_anchor_name"></a><span id="api-product-delete">product delete</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/product/delete</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_ids</td>
+<td>Y</td>
+<td>产品ids，<br>如：product_ids[]=12&amp;product_ids[]=11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "product_ids":[12,11]
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_ids</td>
+<td>删除成功的 product_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="product20lists" name="product20lists"><a name="product20lists" class="blank_anchor_name"></a><span id="api-product-lists">product lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/product/lists</p>
+<p>GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p>** data 参数**</p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>N</td>
+<td>当页页数，默认为1</td>
+</tr>
+<tr>
+<td>page_limit</td>
+<td>N</td>
+<td>每页的最大条数，默认为20，最大值为200</td>
+</tr>
+<tr>
+<td>filter_product_ids</td>
+<td>N</td>
+<td>过滤产品id,可以使用“,”，分隔产品id,绝对搜索</td>
+</tr>
+<tr>
+<td>filter_model</td>
+<td>N</td>
+<td>过滤产品型号,模糊搜索</td>
+</tr>
+<tr>
+<td>filter_sku</td>
+<td>N</td>
+<td>过滤sku,模糊搜索</td>
+</tr>
+<tr>
+<td>filter_skus</td>
+<td>N</td>
+<td>过滤sku,可以使用“,”，分隔sku,绝对搜索</td>
+</tr>
+<tr>
+<td>filter_name</td>
+<td>N</td>
+<td>产品名,模糊搜索</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "total":''
+        , 'maxpage':''
+        , 'page':''
+        , 'per_page_number':''
+    }
+    , "list":[
+        {
+            'product_id':''
+            , 'model':''
+            , 'sku':''
+            , 'upc':''
+            , 'ean':''
+            , 'jan':''
+            , 'isbn':''
+            , 'mpn':''
+            , 'location':''
+            , 'quantity':''
+            , 'stock_status':''
+            , 'image':''
+            , 'manufacturer':''
+            , 'shipping':''
+            , 'price':''
+            , 'points':''
+            , 'tax_class':''
+            , 'date_available':''
+            , 'weight':''
+            , 'weight_class':''
+            , 'length':''
+            , 'width':''
+            , 'height':''
+            , 'length_class':''
+            , 'subtract':''
+            , 'minimum':''
+            , 'sort_order':''
+            , 'status':''
+            , 'viewed':''
+            , 'date_added':''
+            , 'date_modified':''
+            , 'is_hot':''
+        }
+    ]
+}
+</code></pre>
+<p><strong>info 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>数据总条数</td>
+</tr>
+<tr>
+<td>cur_page</td>
+<td>当前的页号</td>
+</tr>
+<tr>
+<td>pre_page_num</td>
+<td>每页输出的条数</td>
+</tr>
+</tbody>
+</table>
+<p>** lists 数据说明**</p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_id</td>
+<td>产品id</td>
+</tr>
+<tr>
+<td>model</td>
+<td>产品型号</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>产品sku</td>
+</tr>
+<tr>
+<td>upc</td>
+<td>通用产品代码</td>
+</tr>
+<tr>
+<td>ean</td>
+<td>欧洲商品编号</td>
+</tr>
+<tr>
+<td>jan</td>
+<td>日本商品号码</td>
+</tr>
+<tr>
+<td>isbn</td>
+<td>国际标准书号</td>
+</tr>
+<tr>
+<td>mpn</td>
+<td>制造商零件编号</td>
+</tr>
+<tr>
+<td>location</td>
+<td>产地</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>数据</td>
+</tr>
+<tr>
+<td>stock_status_id</td>
+<td>库存状态id</td>
+</tr>
+<tr>
+<td>stock_status</td>
+<td>库存状态</td>
+</tr>
+<tr>
+<td>image</td>
+<td>产品首图</td>
+</tr>
+<tr>
+<td>manufacturer</td>
+<td>生产商</td>
+</tr>
+<tr>
+<td>shipping</td>
+<td>是否需要运输</td>
+</tr>
+<tr>
+<td>price</td>
+<td>价格</td>
+</tr>
+<tr>
+<td>points</td>
+<td>购买产品需要的点数</td>
+</tr>
+<tr>
+<td>tax_class_id</td>
+<td>计税方式id</td>
+</tr>
+<tr>
+<td>tax_class</td>
+<td>计税方式名称</td>
+</tr>
+<tr>
+<td>date_available</td>
+<td>生效日期</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>重量</td>
+</tr>
+<tr>
+<td>weight_class</td>
+<td>重量单位</td>
+</tr>
+<tr>
+<td>length</td>
+<td>长度</td>
+</tr>
+<tr>
+<td>width</td>
+<td>宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>高度</td>
+</tr>
+<tr>
+<td>length_class</td>
+<td>长度单位</td>
+</tr>
+<tr>
+<td>subtract</td>
+<td>是否自动扣减库存</td>
+</tr>
+<tr>
+<td>minimum</td>
+<td>最小购买数量</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>订单排序</td>
+</tr>
+<tr>
+<td>status</td>
+<td>产品状态</td>
+</tr>
+<tr>
+<td>viewed</td>
+<td>查看数</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td>添加时间</td>
+</tr>
+<tr>
+<td>date_modified</td>
+<td>修改时间</td>
+</tr>
+<tr>
+<td>is_hot</td>
+<td>是否热销产品</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="category" name="category"><a name="category" class="blank_anchor_name"></a><span id="api-category">category</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/category</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_id</td>
+<td>Y</td>
+<td>分类id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">{
+    "status_no": 0,
+    "msg": "success",
+    "info": {
+        "category_id": "2",
+        "image": "",
+        "parent_id": "5",
+        "top": "0",
+        "column": "1",
+        "sort_order": "0",
+        "status": "1",
+        "date_added": "2016-04-01 15: 08: 33",
+        "date_modified": "2016-04-01 16: 39: 47",
+        "paths": "4,
+        5,
+        2",
+        "category_description": [
+            {
+                "category_id": "2",
+                "language_id": "1",
+                "name": "category1.1test",
+                "description": "",
+                "meta_title": "category1.1test",
+                "meta_description": "",
+                "meta_keyword": "",
+                "names": "category2&gt;category2.2&gt;category1.1test"
+            }
+        ]
+    },
+    "lists": [
+    ]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_id</td>
+<td>分类id</td>
+</tr>
+<tr>
+<td>image</td>
+<td>图片id</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>父分类id</td>
+</tr>
+<tr>
+<td>top</td>
+<td>是否显示在顶部，1为显示，0为不显示</td>
+</tr>
+<tr>
+<td>column</td>
+<td>显示子菜单，1为显示，0为不显示</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>status</td>
+<td>状态，1为enable,0为disable</td>
+</tr>
+<tr>
+<td>date_added</td>
+<td>添加时间</td>
+</tr>
+<tr>
+<td>date_modified</td>
+<td>修改时间</td>
+</tr>
+<tr>
+<td>paths</td>
+<td>层级的id路径</td>
+</tr>
+<tr>
+<td>category_description</td>
+<td>数组，分类的描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>info.category_description数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>分类名</td>
+</tr>
+<tr>
+<td>description</td>
+<td>描述</td>
+</tr>
+<tr>
+<td>meta_title</td>
+<td>meta的标题</td>
+</tr>
+<tr>
+<td>meta_description</td>
+<td>meta的描述</td>
+</tr>
+<tr>
+<td>meta_keyword</td>
+<td>meta的keyword</td>
+</tr>
+<tr>
+<td>names</td>
+<td>层级的名称路径</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="category20add" name="category20add"><a name="category20add" class="blank_anchor_name"></a><span id="api-category-add">category add</span></h3>
+<p><a href="#menu">TOP</a></p>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/category/add</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p>** data 参数**</p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>N</td>
+<td>图片</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>Y</td>
+<td>父分类id</td>
+</tr>
+<tr>
+<td>top</td>
+<td>N</td>
+<td>是否顶部显示</td>
+</tr>
+<tr>
+<td>column</td>
+<td>N</td>
+<td>显示子菜单的数量</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>N</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>status</td>
+<td>N</td>
+<td>状态</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.category_description 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>分类名</td>
+</tr>
+<tr>
+<td>description</td>
+<td>N</td>
+<td>分类描述</td>
+</tr>
+<tr>
+<td>meta_title</td>
+<td>Y</td>
+<td>分类详细页的meta标题</td>
+</tr>
+<tr>
+<td>meta_description</td>
+<td>N</td>
+<td>分类详细页的meta描述</td>
+</tr>
+<tr>
+<td>meta_keyword</td>
+<td>N</td>
+<td>分类详细页的meta关键字</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.category_filter 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filter_id</td>
+<td>Y</td>
+<td>过滤条件的id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "category_id":"123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_id</td>
+<td>新增的category_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="category20edit" name="category20edit"><a name="category20edit" class="blank_anchor_name"></a><span id="api-category-edit">category edit</span></h3>
+<p><a href="#menu">TOP</a></p>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/category/add</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p>** data 参数**</p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_id</td>
+<td>Y</td>
+<td>分类id</td>
+</tr>
+<tr>
+<td>image</td>
+<td>N</td>
+<td>图片</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>N</td>
+<td>父分类id</td>
+</tr>
+<tr>
+<td>top</td>
+<td>N</td>
+<td>是否顶部显示</td>
+</tr>
+<tr>
+<td>column</td>
+<td>N</td>
+<td>显示子菜单的数量</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>N</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>status</td>
+<td>N</td>
+<td>状态</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.category_description 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>分类名</td>
+</tr>
+<tr>
+<td>description</td>
+<td>N</td>
+<td>分类描述</td>
+</tr>
+<tr>
+<td>meta_title</td>
+<td>Y</td>
+<td>分类详细页的meta标题</td>
+</tr>
+<tr>
+<td>meta_description</td>
+<td>N</td>
+<td>分类详细页的meta描述</td>
+</tr>
+<tr>
+<td>meta_keyword</td>
+<td>N</td>
+<td>分类详细页的meta关键字</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.category_filter 参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filter_id</td>
+<td>Y</td>
+<td>过滤条件的id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "category_id":"123"
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_id</td>
+<td>分类id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="category20delete" name="category20delete"><a name="category20delete" class="blank_anchor_name"></a><span id="api-category-delete">category delete</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/category/delete</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_ids</td>
+<td>Y</td>
+<td>分类ids，<br>如：category_ids[]=12&amp;category_ids[]=11</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "category_ids":[12,11]
+    }
+    , "list":[]
+}
+// 失败
+{
+    "status_no":1
+    , "msg":"error"
+    , "info":{}
+    , "list":[]
+}
+</code></pre>
+<p><strong>info数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>category_ids</td>
+<td>删除成功的 category_id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="category20lists" name="category20lists"><a name="category20lists" class="blank_anchor_name"></a><span id="api-category-lists">category lists</span></h3>
+<p><a href="#menu">TOP</a><br>
+<strong>接口uri</strong><br>
+/index.php?route=api/v2/category/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>N</td>
+<td>当页页数，默认为1</td>
+</tr>
+<tr>
+<td>page_limit</td>
+<td>N</td>
+<td>每页的最大条数，默认为20，最大值为200</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回数据</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">// 成功
+{
+    "status_no":0
+    , "msg":"success"
+    , "info":{
+        "total":''
+        , 'maxpage':''
+        , 'page':''
+        , 'per_page_number':''
+    }
+    , "list":[
+        {
+            "category_id":"1"
+            , "image":""
+            , "image_url":""
+            , "parent_id":''
+            , "sort_order":""
+            , "status":''
+            , "path":''
+            , "category_description":[{
+                "language_id":''
+                , "name":""
+                , "description":""
+            }]
+        }
+    ]
+}
+</code></pre>
+<p><strong>info 数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total</td>
+<td>数据总条数</td>
+</tr>
+<tr>
+<td>cur_page</td>
+<td>当前的页号</td>
+</tr>
+<tr>
+<td>pre_page_num</td>
+<td>每页输出的条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer_group_id</td>
+<td>客户组id</td>
+</tr>
+<tr>
+<td>image</td>
+<td>是否必须要通过审核</td>
+</tr>
+<tr>
+<td>image_url</td>
+<td>排序id</td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>排序id</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>排序id</td>
+</tr>
+<tr>
+<td>status</td>
+<td>排序id</td>
+</tr>
+<tr>
+<td>path</td>
+<td>分类路径，使用","分隔</td>
+</tr>
+<tr>
+<td>category_description</td>
+<td>数组，分类描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>list.category_description数据说明</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language_id</td>
+<td>语言id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>分类名名字</td>
+</tr>
+<tr>
+<td>description</td>
+<td>分类描述</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="e99499e8afafe8a1a8e58d95" name="e99499e8afafe8a1a8e58d95"><a name="e99499e8afafe8a1a8e58d95" class="blank_anchor_name"></a><span id="status_no_list">错误表单</span></h1>
+<ul>
+<li><p>0 成功</p></li>
+<li><p>1 失败,不确定的错误。</p></li>
+<li><p>2 token无效</p></li>
+<li><p>3 无法解密data</p></li>
+<li><p>4 数据签名(sign)验证失败</p></li>
+<li><p>100 登录ip限制</p></li>
+<li><p>101 登录key错误</p></li>
+</ul>
+<h3 id="option20add" name="option20add"><a name="option20add" class="blank_anchor_name"></a><span id="api-option-add">option add</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/option/add</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_description</td>
+<td>Y</td>
+<td>选项描述</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Y</td>
+<td>选项类型</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>option_value</td>
+<td>Y</td>
+<td>选项值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.option_description</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.option_value</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_value_description</td>
+<td>Y</td>
+<td>选项值</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Y</td>
+<td>图片路径</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.option_value.option_value_description</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言ID</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>example code</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">Array
+(
+    [option_description] =&gt; Array
+    (
+        [0] =&gt; Array
+            (
+                [name] =&gt; one
+                [language_id] =&gt; 1
+            )
+        [1] =&gt; Array
+            (
+                [name] =&gt; two
+                [language_id] =&gt; 2
+            )
+    )
+    [type] =&gt; image
+    [sort_order] =&gt; 1
+    [option_value] =&gt; Array
+        (
+            [0] =&gt; Array
+                (
+                    [option_value_id] =&gt; 
+                    [option_value_description] =&gt; Array
+                        (
+                            [0] =&gt; Array
+                                (
+                                    [name] =&gt; one1
+                                    [language_id] =&gt; 1
+                                    [sort_order] =&gt; 20
+                                )
+                            [1] =&gt; Array
+                                (
+                                    [name] =&gt; one2
+                                    [language_id] =&gt; 2
+                                    [sort_order] =&gt; 20
+                                )
+                        )
+                    [image] =&gt; 
+                    [sort_order] =&gt; 200
+                )
+            [1] =&gt; Array
+                (
+                    [option_value_id] =&gt; 
+                    [option_value_description] =&gt; Array
+                        (
+                            [0] =&gt; Array
+                                (
+                                    [name] =&gt; two1
+                                    [language_id] =&gt; 1
+                                    [sort_order] =&gt; 20
+                                )
+                            [1] =&gt; Array
+                                (
+                                    [name] =&gt; two2
+                                    [language_id] =&gt; 2
+                                    [sort_order] =&gt; 20
+                                )
+                        )
+                    [image] =&gt; 
+                    [sort_order] =&gt; 200
+                )
+        )
+)
+
+option_description[0][name]=one&amp;option_description[0][language_id]=1&amp;option_description[1][name]=two&amp;option_description[1][language_id]=2&amp;type=image&amp;sort_order=1&amp;option_value[0][option_value_id]=&amp;option_value[0][option_value_description][0][name]=one1&amp;option_value[0][option_value_description][0][language_id]=1&amp;option_value[0][option_value_description][0][sort_order]=20&amp;option_value[0][option_value_description][1][name]=one2&amp;option_value[0][option_value_description][1][language_id]=2&amp;option_value[0][option_value_description][1][sort_order]=20&amp;option_value[0][image]=&amp;option_value[0][sort_order]=200&amp;option_value[1][option_value_id]=&amp;option_value[1][option_value_description][0][name]=two1&amp;option_value[1][option_value_description][0][language_id]=1&amp;option_value[1][option_value_description][0][sort_order]=20&amp;option_value[1][option_value_description][1][name]=two2&amp;option_value[1][option_value_description][1][language_id]=2&amp;option_value[1][option_value_description][1][sort_order]=20&amp;option_value[1][image]=&amp;option_value[1][sort_order]=200
+</code></pre>
+<h3 id="option20edit" name="option20edit"><a name="option20edit" class="blank_anchor_name"></a><span id="api-option-edit">option edit</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/option/edit</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_id</td>
+<td>Y</td>
+<td>被编辑选项ID</td>
+</tr>
+<tr>
+<td>option_description</td>
+<td>Y</td>
+<td>选项描述</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Y</td>
+<td>选项类型</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>option_value</td>
+<td>Y</td>
+<td>选项值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.option_description</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.option_value</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_value_description</td>
+<td>Y</td>
+<td>选项值</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Y</td>
+<td>图片路径</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.option_value.option_value_description</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>名称</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言ID</td>
+</tr>
+<tr>
+<td>sort_order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>example code</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">Array
+(
+    [option_id] =&gt; 14
+    [option_description] =&gt; Array
+        (
+            [0] =&gt; Array
+                (
+                    [name] =&gt; secai
+                    [language_id] =&gt; 1
+                )
+
+            [1] =&gt; Array
+                (
+                    [name] =&gt; caise
+                    [language_id] =&gt; 2
+                )
+        )
+    [type] =&gt; image
+    [sort_order] =&gt; 1
+    [option_value] =&gt; Array
+        (
+            [0] =&gt; Array
+                (
+                    [option_value_id] =&gt; 
+                    [option_value_description] =&gt; Array
+                        (
+                            [0] =&gt; Array
+                                (
+                                    [name] =&gt; one1
+                                    [language_id] =&gt; 1
+                                    [sort_order] =&gt; 20
+                                )
+                            [1] =&gt; Array
+                                (
+                                    [name] =&gt; one2
+                                    [language_id] =&gt; 2
+                                    [sort_order] =&gt; 20
+                                )
+                        )
+                    [image] =&gt; 
+                    [sort_order] =&gt; 200
+                )
+            [1] =&gt; Array
+                (
+                    [option_value_id] =&gt; 
+                    [option_value_description] =&gt; Array
+                        (
+                            [0] =&gt; Array
+                                (
+                                    [name] =&gt; two1
+                                    [language_id] =&gt; 1
+                                    [sort_order] =&gt; 20
+                                )
+                            [1] =&gt; Array
+                                (
+                                    [name] =&gt; two2
+                                    [language_id] =&gt; 2
+                                    [sort_order] =&gt; 20
+                                )
+                        )
+                    [image] =&gt; 
+                    [sort_order] =&gt; 200
+                )
+        )
+)
+option_id=14&amp;option_description[0][name]=secai&amp;option_description[0][language_id]=1&amp;option_description[1][name]=caise&amp;option_description[1][language_id]=2&amp;type=image&amp;sort_order=1&amp;option_value[0][option_value_id]=&amp;option_value[0][option_value_description][0][name]=one1&amp;option_value[0][option_value_description][0][language_id]=1&amp;option_value[0][option_value_description][0][sort_order]=20&amp;option_value[0][option_value_description][1][name]=one2&amp;option_value[0][option_value_description][1][language_id]=2&amp;option_value[0][option_value_description][1][sort_order]=20&amp;option_value[0][image]=&amp;option_value[0][sort_order]=200&amp;option_value[1][option_value_id]=&amp;option_value[1][option_value_description][0][name]=two1&amp;option_value[1][option_value_description][0][language_id]=1&amp;option_value[1][option_value_description][0][sort_order]=20&amp;option_value[1][option_value_description][1][name]=two2&amp;option_value[1][option_value_description][1][language_id]=2&amp;option_value[1][option_value_description][1][sort_order]=20&amp;option_value[1][image]=&amp;option_value[1][sort_order]=200
+</code></pre>
+<h3 id="option20delete" name="option20delete"><a name="option20delete" class="blank_anchor_name"></a><span id="api-option-delete">option delete</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/option/delete</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>option_id</td>
+<td>Y</td>
+<td>选项ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="option20lists" name="option20lists"><a name="option20lists" class="blank_anchor_name"></a><span id="api-option-lists">option lists</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/option/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<h3 id="attribute20groupadd" name="attribute20groupadd"><a name="attribute20groupadd" class="blank_anchor_name"></a><span id="api-attribute-groupadd">attribute groupadd</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/attribute/groupadd</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_group_description</td>
+<td>Y</td>
+<td>属性组描述</td>
+</tr>
+<tr>
+<td>sort order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.attribute_group_description</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>属性组名称</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>example code</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">Array
+(
+    [attribute_group_description] =&gt; Array
+        (
+            [0] =&gt; Array
+                (
+                    [name] =&gt; dangpengsong
+                    [language_id] =&gt; 1
+                )
+
+            [1] =&gt; Array
+                (
+                    [name] =&gt; gnosgnepgnad
+                    [language_id] =&gt; 2
+                )
+
+        )
+
+    [sort_order] =&gt; 1
+)
+attribute_group_description[0][name]=dangpengsong&amp;attribute_group_description[0][language_id]=1&amp;attribute_group_description[1][name]=gnosgnepgnad&amp;attribute_group_description[1][language_id]=2&amp;sort_order=1
+</code></pre>
+<h3 id="attribute20groupedit" name="attribute20groupedit"><a name="attribute20groupedit" class="blank_anchor_name"></a><span id="api-attribute-groupedit">attribute groupedit</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/attribute/groupedit</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_group_id</td>
+<td>Y</td>
+<td>被编辑属性组ID</td>
+</tr>
+<tr>
+<td>attribute_group_description</td>
+<td>Y</td>
+<td>属性组描述</td>
+</tr>
+<tr>
+<td>sort order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.attribute_group_description</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>属性组名称</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>example code</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">Array
+(
+    [attribute_group_id] =&gt; 10
+    [attribute_group_description] =&gt; Array
+        (
+            [0] =&gt; Array
+                (
+                    [name] =&gt; sdangpengsong
+                    [language_id] =&gt; 1
+                )
+
+            [1] =&gt; Array
+                (
+                    [name] =&gt; sgnosgnepgnad
+                    [language_id] =&gt; 2
+                )
+
+        )
+
+    [sort_order] =&gt; 100
+)
+attribute_group_id=10&amp;attribute_group_description[0][name]=sdangpengsong&amp;attribute_group_description[0][language_id]=1&amp;attribute_group_description[1][name]=sgnosgnepgnad&amp;attribute_group_description[1][language_id]=2&amp;sort_order=100
+</code></pre>
+<h3 id="attribute20grouplists" name="attribute20grouplists"><a name="attribute20grouplists" class="blank_anchor_name"></a><span id="api-attribute-grouplists">attribute grouplists</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/attribute/grouplists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<h3 id="attribute20groupdelete" name="attribute20groupdelete"><a name="attribute20groupdelete" class="blank_anchor_name"></a><span id="api-attribute-groupdelete">attribute groupdelete</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/attribute/groupdelete</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_group_id</td>
+<td>Y</td>
+<td>被删除属性组ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="attribute20add" name="attribute20add"><a name="attribute20add" class="blank_anchor_name"></a><span id="api-attribute-add">attribute add</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/attribute/add</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_description</td>
+<td>Y</td>
+<td>属性描述</td>
+</tr>
+<tr>
+<td>attribute_group_id</td>
+<td>Y</td>
+<td>属性所属组别ID</td>
+</tr>
+<tr>
+<td>sort order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.attribute_description</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>属性名称</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>example code</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">Array
+(
+    [attribute_group_id] =&gt; 9
+    [attribute_description] =&gt; Array
+        (
+            [0] =&gt; Array
+                (
+                    [name] =&gt; absstr
+                    [language_id] =&gt; 1
+                )
+            [1] =&gt; Array
+                (
+                    [name] =&gt; rtssba
+                    [language_id] =&gt; 2
+                )
+        )
+    [sort_order] =&gt; 60
+)
+attribute_group_id=9&amp;attribute_description[0][name]=absstr&amp;attribute_description[0][language_id]=1&amp;attribute_description[1][name]=rtssba&amp;attribute_description[1][language_id]=2&amp;sort_order=60
+</code></pre>
+<h3 id="attribute20edit" name="attribute20edit"><a name="attribute20edit" class="blank_anchor_name"></a><span id="api-attribute-edit">attribute edit</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/attribute/edit</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_id</td>
+<td>Y</td>
+<td>被编辑属性ID</td>
+</tr>
+<tr>
+<td>attribute_description</td>
+<td>Y</td>
+<td>属性描述</td>
+</tr>
+<tr>
+<td>attribute_group_id</td>
+<td>Y</td>
+<td>属性所属组别ID</td>
+</tr>
+<tr>
+<td>sort order</td>
+<td>Y</td>
+<td>排序</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data.attribute_description</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Descriotion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Y</td>
+<td>属性名称</td>
+</tr>
+<tr>
+<td>language_id</td>
+<td>Y</td>
+<td>语言ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>example  code</strong></p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">Array
+(
+    [attribute_id] =&gt; 22
+    [attribute_group_id] =&gt; 11
+    [attribute_description] =&gt; Array
+        (
+            [0] =&gt; Array
+                (
+                    [name] =&gt; eeeeeee
+                    [language_id] =&gt; 1
+                )
+
+            [1] =&gt; Array
+                (
+                    [name] =&gt; ddddddd
+                    [language_id] =&gt; 2
+                )
+
+        )
+
+    [sort_order] =&gt; 30
+)
+attribute_id=22&amp;attribute_group_id=11&amp;attribute_description[0][name]=eeeeeee&amp;attribute_description[0][language_id]=1&amp;attribute_description[1][name]=ddddddd&amp;attribute_description[1][language_id]=2&amp;sort_order=30
+</code></pre>
+<h3 id="attribute20delete" name="attribute20delete"><a name="attribute20delete" class="blank_anchor_name"></a><span id="api-attribute-delete">attribute delete</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/attribute/delete</p>
+<p><strong>请求方式</strong><br>
+POST</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute_id</td>
+<td>Y</td>
+<td>属性ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="attribute20lists" name="attribute20lists"><a name="attribute20lists" class="blank_anchor_name"></a><span id="api-attribute-lists">attribute lists</span></h3>
+<p><strong>接口uri</strong><br>
+/index.php?route=api/v2/attribute/lists</p>
+<p><strong>请求方式</strong><br>
+GET</p>
+<p><strong>参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Y</td>
+<td>会话状态</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Y</td>
+<td>传递的数据</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>Y</td>
+<td>数据验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>data参数</strong></p>
+<table class="table table-striped table-celled  ">
+<thead>
+<tr>
+<th>field name</th>
+<th>Essential</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attribute group id</td>
+<td>N</td>
+<td>属性所属组别ID</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div></div>
+</body></html>
+

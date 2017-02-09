@@ -1,0 +1,390 @@
+-- 上传trackingNo实现类 
+-- Amazon
+INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+)
+VALUES
+	(
+		'88',
+		'CHANNEL_ACCOUNT',
+		'264',
+		'classNameForUploadingTracking',
+		'com.omniselling.channel.v5.service.UploadShipmentInfoV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+
+INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+)
+VALUES
+	(
+		'88',
+		'CHANNEL_ACCOUNT',
+		'356',
+		'classNameForUploadingTracking',
+		'com.omniselling.channel.v5.service.UploadShipmentInfoV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+
+INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+)
+VALUES
+	(
+		'88',
+		'CHANNEL_ACCOUNT',
+		'477',
+		'classNameForUploadingTracking',
+		'com.omniselling.channel.v5.service.UploadShipmentInfoV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+
+-- ebay
+INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+)
+VALUES
+	(
+		'95',
+		'CHANNEL_ACCOUNT',
+		'90',
+		'classNameForUploadingTracking',
+		'com.omniselling.channel.v5.service.UploadShipmentInfoV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+
+-- Newegg
+INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+)
+VALUES
+	(
+		'2000048',
+		'CHANNEL_ACCOUNT',
+		'149',
+		'classNameForUploadingTracking',
+		'com.omniselling.channel.v5.service.UploadShipmentInfoV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+
+INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+)
+VALUES
+	(
+		'2000048',
+		'CHANNEL_ACCOUNT',
+		'150',
+		'classNameForUploadingTracking',
+		'com.omniselling.channel.v5.service.UploadShipmentInfoV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+
+-- OmniCart
+INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+)
+VALUES
+	(
+		'2000183',
+		'CHANNEL_ACCOUNT',
+		'563',
+		'classNameForUploadingTracking',
+		'com.omniselling.channel.v5.service.UploadShipmentInfoV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+
+-- Wish
+INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+)
+VALUES
+	(
+		'232',
+		'CHANNEL_ACCOUNT',
+		'627',
+		'classNameForUploadingTracking',
+		'com.omniselling.channel.v5.service.UploadShipmentInfoV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+	
+	
+	-- 拉单实现类
+	-- Amazon
+	INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+    )
+    VALUES
+	(
+		'87',
+		'CHANNEL_ACCOUNT',
+		'264',
+		'classNameForfetchingOrder',
+		'com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+    INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+    )
+    VALUES
+	(
+		'87',
+		'CHANNEL_ACCOUNT',
+		'356',
+		'classNameForfetchingOrder',
+		'com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+    INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+    )
+    VALUES
+	(
+		'87',
+		'CHANNEL_ACCOUNT',
+		'477',
+		'classNameForfetchingOrder',
+		'com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+   
+	-- ebay
+	INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+    )
+    VALUES
+	(
+		'94',
+		'CHANNEL_ACCOUNT',
+		'90',
+		'classNameForfetchingOrder',
+		'com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+	-- Newegg
+	INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+    )
+    VALUES
+	(
+		'2000047',
+		'CHANNEL_ACCOUNT',
+		'149',
+		'classNameForfetchingOrder',
+		'com.omniselling.channel.v5.service.FetchOrderNeweggV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+    INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+    )
+    VALUES
+	(
+		'2000047',
+		'CHANNEL_ACCOUNT',
+		'150',
+		'classNameForfetchingOrder',
+		'com.omniselling.channel.v5.service.FetchOrderNeweggV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+	-- OmniCart
+	INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+    )
+    VALUES
+	(
+		'2000182',
+		'CHANNEL_ACCOUNT',
+		'563',
+		'classNameForfetchingOrder',
+		'com.omniselling.channel.v5.service.FetchOrderOmniCartV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);
+	-- Wish
+	INSERT INTO objectfieldvalue (
+	`fieldSpecId`,
+	`objectType`,
+	`objectId`,
+	`fieldName`,
+	`fieldValue`,
+	`createdDate`,
+	`createdBy`,
+	`modifiedDate`,
+	`modifiedBy`
+    )
+    VALUES
+	(
+		'231',
+		'CHANNEL_ACCOUNT',
+		'627',
+		'classNameForfetchingOrder',
+		'com.omniselling.channel.v5.service.FetchOrderWishV5Impl',
+		NOW(),
+		'-99999',
+		NOW(),
+		'-99999'
+	);

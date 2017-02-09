@@ -1,0 +1,37 @@
+pull:
+http://172.16.7.119:8083/channelorder/channelorder/pullchannelorder
+
+{
+  "nonceToken": "",
+  "operatorId": -99999,
+  "loginId": "v4ink",
+  "language": "zh-cn",
+  "asyncRequest": false,
+  "data": {
+    "channelType": "AmazonDe",
+    "accountName": "Lisida-DE",
+    "channelOrderNo": "",
+    "orderStatus": "",
+    "modifiedDateFrom": "",
+    "modifiedDateTo": ""
+  }
+}
+
+
+query:
+http://172.16.7.119:8083/channelorder/channelorder/listchannelorders
+{
+  "nonceToken": "",
+  "operatorId": -99999,
+  "loginId": "v4ink",
+  "language": "zh-cn",
+  "asyncRequest": false,
+  "data": {
+    "channelType": "AmazonDe",
+    "accountName": "Lisida-DE",
+    "channelOrderNo": "",
+    "orderStatus": "",
+    "fetchDateFrom": "1465398883000",
+    "fetchDateTo": "1465836973000"
+  }
+}

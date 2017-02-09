@@ -1,0 +1,21 @@
+INSERT INTO `omniprodv4`.`objectfieldvalue` 
+(`fieldSpecId`,`objectType`,`objectId`,`fieldName`,`fieldValue`,`createdDate`,`createdBy`,`modifiedDate`,`modifiedBy`)VALUES
+('87','CHANNEL_ACCOUNT','132','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','21','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','64','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','100','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','37','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','20','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','5','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','263','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','8','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('87','CHANNEL_ACCOUNT','262','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderAmazonV5Impl',NOW(),'-99999',NOW(),'-99999'),
+
+('94','CHANNEL_ACCOUNT','102','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('94','CHANNEL_ACCOUNT','36','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('94','CHANNEL_ACCOUNT','180','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('94','CHANNEL_ACCOUNT','61','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('94','CHANNEL_ACCOUNT','14','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('94','CHANNEL_ACCOUNT','19','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('94','CHANNEL_ACCOUNT','18','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',NOW(),'-99999',NOW(),'-99999'),
+('94','CHANNEL_ACCOUNT','6','classNameForfetchingOrder','com.omniselling.channel.v5.service.FetchOrderEbayV5Impl',NOW(),'-99999',NOW(),'-99999');

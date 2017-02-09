@@ -1,0 +1,22 @@
+##产品销毁SQL：
+SELECT
+		  a.id,
+		  a.businessNum,
+		  "RMA"         AS orderType,
+		  a.accountId,
+          a.warehouseId,
+          a.orderStatus,
+          a.createdDate,
+          ai.loginId  
+		FROM (SELECT
+		        id,
+		        businessNum,
+		        accountId,
+                warehouseId,
+                orderStatus, 
+                createdDate 
+		      FROM rmaorder
+		      WHERE orderStatus IN("Finished","RecvDoneOdr")) a
+		  LEFT JOIN rmaorderitem b
+		    ON a.id = b.rmaorderId
+		WHERE b.handleWay = "DESTROY"

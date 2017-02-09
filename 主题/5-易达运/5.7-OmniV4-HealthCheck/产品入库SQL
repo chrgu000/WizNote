@@ -1,0 +1,38 @@
+##入库订单SQL
+		select 
+          co.id,
+          co.businessNum,
+          "TRF" as orderType,
+          co.storageWarehouseId as warehouseId,
+          co.accountId,
+          co.orderStatus,
+          co.createdDate,
+          ai.loginId
+          from changewhorder co
+          LEFT JOIN accountinfo ai ON co.accountId = ai.id
+        UNION
+        select 
+          ro.id,
+          ro.businessNum,
+          "REM" as orderType, 
+          ro.accountId ,
+          ro.warehouseId,
+          ro.orderStatus,
+          ro.createdDate,
+          ai.loginId
+          from remorder ro
+          LEFT JOIN accountinfo ai ON ro.accountId = ai.id
+        where orderStatus = 'Finished'
+        UNION
+        select 
+          rmo.id,
+          rmo.businessNum,
+          "RMA" as orderType, 
+          rmo.accountId ,
+          rmo.warehouseId,
+          rmo.orderStatus,
+          rmo.createdDate,
+          ai.loginId 
+          from rmaorder rmo
+          LEFT JOIN accountinfo ai ON rmo.accountId = ai.id
+        where orderStatus ='Finished';

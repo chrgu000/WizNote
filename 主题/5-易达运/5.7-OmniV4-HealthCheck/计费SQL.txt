@@ -1,0 +1,119 @@
+-- 运费漏计费
+SELECT
+	o.*,
+	wo.id
+FROM
+	omniorder o
+LEFT JOIN warehouseworkorderinfo wo ON wo.businessNum = o.businessNum
+left join courieraccount on courieraccount.id = o.courierAccountId
+LEFT JOIN outshipment os ON os.businessNum = o.businessNum
+LEFT JOIN chargeresult cr ON cr.businessNum = o.businessNum
+AND cr.chargeItemId IN (
+	SELECT
+		ci.id
+	FROM
+		chargeitem ci
+	WHERE
+		ci.chargeItemCode = 'ooDelivery'
+	OR ci.chargeItemCode = 'feeAdjust'
+)
+LEFT JOIN omniaddress oad ON o.shippingAddressId = oad.id
+
+WHERE
+	o.orderStatus IN ("Shipped", "Invoiced")
+AND o.fulfilmentType = 'SELF_FULFIL'
+AND (
+	wo.workOrderType = 'deliver'
+	AND wo.workOrderStatus = "new"
+	OR wo.id IS NULL
+)
+and courieraccount.courierPolicyName != 'Pickup'
+and o.id > 2000000
+AND os.businessNum IS NOT NULL
+AND cr.businessNum IS NULL
+GROUP BY
+	o.businessNum
+ORDER BY
+	o.createdDate DESC
+
+
+
+
+-- 出库漏计费
+
+SELECT
+	o.*,
+	wo.id
+FROM
+	omniorder o
+LEFT JOIN warehouseworkorderinfo wo ON wo.businessNum = o.businessNum
+left join courieraccount on courieraccount.id = o.courierAccountId
+LEFT JOIN outshipment os ON os.businessNum = o.businessNum
+LEFT JOIN chargeresult cr ON cr.businessNum = o.businessNum
+AND cr.chargeItemId IN (
+	SELECT
+		ci.id
+	FROM
+		chargeitem ci
+	WHERE
+		ci.chargeItemCode = 'ooOrderProcess'
+	OR ci.chargeItemCode = 'feeAdjust'
+)
+LEFT JOIN omniaddress oad ON o.shippingAddressId = oad.id
+WHERE
+	o.orderStatus IN ("Shipped", "Invoiced")
+AND o.fulfilmentType = 'SELF_FULFIL'
+AND (
+	wo.workOrderType = 'deliver'
+	AND wo.workOrderStatus = "new"
+	OR wo.id IS NULL
+)
+and courieraccount.courierPolicyName != 'Pickup'
+and o.id > 2000000
+AND os.businessNum IS NOT NULL
+AND cr.businessNum IS NULL
+GROUP BY
+	o.businessNum
+ORDER BY
+	o.createdDate DESC
+
+
+-- 入库处理费
+
+select id,businessNum,"TRF" as orderType from changewhorder   
+UNION
+select id,businessNum,"REM" as orderType from remorder where orderStatus = 'Finished'
+UNION
+select id,businessNum,"RMA" as orderType from rmaorder where orderStatus = 'Finished'
+
+
+
+
+
+-- 产品拍照
+select a.*,c.additionalServiceType from (
+select id,businessNum from rmaorder where orderStatus in ("Finished","RecvDoneOdr")
+) a left join rmaorderitem b on a.id = b.rmaorderId 
+left join orderitemaddonaction c on c.inbOrderItemId = b.id
+where (b.handleWay = 'CHECK' and c.additionalServiceType is null) or c.additionalServiceType = "CHECK" or c.additionalServiceType = "TAKING_PICTURES"
+
+-- 重新包装费用
+select a.*,c.additionalServiceType from (
+select id,businessNum from rmaorder where orderStatus in ("Finished","RecvDoneOdr")
+) a left join rmaorderitem b on a.id = b.rmaorderId 
+left join orderitemaddonaction c on c.inbOrderItemId = b.id
+where c.additionalServiceType = "PACKAGE"
+
+
+-- 产品销毁
+select a.* from (
+select id,businessNum from rmaorder where orderStatus in ("Finished","RecvDoneOdr")
+) a left join rmaorderitem b on a.id = b.rmaorderId 
+where b.handleWay = "DESTROY"
+
+
+-- 重新上架
+select a.* from (
+select id,businessNum from rmaorder where orderStatus in ("Finished","RecvDoneOdr")
+) a left join rmaorderitem b on a.id = b.rmaorderId 
+where b.handleWay = "SHELVES"

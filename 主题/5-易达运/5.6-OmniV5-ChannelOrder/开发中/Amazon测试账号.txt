@@ -1,0 +1,11 @@
+accessKey    = "AKIAI35GGMKJ3XZRAGQQ";
+
+secretKey    = "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";
+
+mwsAuthToken = "amzn.mws.eca47227-bb49-8cc8-0259-1f2e7adb43a4";
+
+URL="https://mws.amazonservices.com";
+
+sellerId     = "A13BK7OH0VGA0G";
+
+MarketplaceId="ATVPDKIKX0DER";

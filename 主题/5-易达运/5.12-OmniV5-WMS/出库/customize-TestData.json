@@ -1,0 +1,39 @@
+  {
+    'id': '1',
+    'warehouse': {
+      'id': '1',
+      'warehouseName': '美西仓',
+      'warehouseCode': 'MXC',
+      'countryCode': 'CA',
+      'warehouseType': 'PUBLIC',
+      'isVirtual': 'False',
+      'shippingAddress': {
+        'id': '1',
+        'customerName': '美西仓库',
+        'phoneNumber': '123456789',
+        'fax': 'null',
+        'countryCode': 'AE',
+        'provState': '州',
+        'cityInfo': '城市',
+        'postalCode': '00001',
+        'addressLine1': '地址1',
+        'addressLine2': '地址2',
+        'emailAddress': '邮箱'
+      },
+      'receiveAddressId': {
+        'id': '1',
+        'customerName': '美西仓库',
+        'phoneNumber': '123456789',
+        'fax': 'null',
+        'countryCode': 'CA',
+        'provState': '州',
+        'cityInfo': '城市',
+        'postalCode': '00001',
+        'addressLine1': '地址1',
+        'addressLine2': '地址2',
+        'emailAddress': '邮箱'
+      },
+      'active': 'null',
+      'remark': 'null'
+    }
+  }

@@ -1,0 +1,45 @@
+FBA0010074058
+FBA0010074058
+
+Function:	BarCode
+Input:
+	//String code
+	//Code128Bean codeBean
+	List<BizFbaReplenishOrder> list
+	
+Output:
+	//FilePath path
+	List<BizFbaRplnshOrdrBarCode> list
+outPutModel:
+	BizFbaRplnshOrdrBarCode 
+		String shipmentId
+		String name
+		String planId
+		String shipTo
+		Integer Total SKUs
+		Integer Total Units
+		Integer shipment-total-cases
+		String Pack list
+		List<BizFbaRplnshOrdrItemBarCode> list
+	BizFbaRplnshOrdrItemBarCode
+		String Merchant SKU
+		String Title
+		String ASIN
+		String FNSKU
+		String external-id
+		String Condition
+		String Who will prep
+		String Prep Type
+		String Who will label
+		Integer Units per Case
+		Integer Number of Cases
+		Integer Shipped
+		String codeImagePath
+
+Function:			
+	Input:
+		String orderNo
+	OutPut:
+		List<ViewFbaRplnshOrdrBarCode> list
+		
+		

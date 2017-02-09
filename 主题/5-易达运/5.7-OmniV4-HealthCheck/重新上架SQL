@@ -1,0 +1,24 @@
+##重新上架SQL：
+select 
+		  a.id,
+		  a.businessNum,
+		  "RMA" as orderType,
+		  a.accountId,
+		  a.warehouseId,
+		  a.orderStatus,
+          a.createdDate,
+          ai.loginId   
+		from (
+		  select 
+		      id,
+		      businessNum,
+		      accountId,
+              warehouseId,
+              orderStatus, 
+              createdDate  
+	      from rmaorder 
+	      where orderStatus in ("Finished","RecvDoneOdr")
+		) a 
+		LEFT JOIN accountinfo ai ON a.accountId = ai.id 
+		left join rmaorderitem b on a.id = b.rmaorderId
+		where b.handleWay = "SHELVES"
