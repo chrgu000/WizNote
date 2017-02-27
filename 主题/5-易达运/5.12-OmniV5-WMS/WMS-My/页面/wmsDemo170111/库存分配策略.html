@@ -1,0 +1,1087 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>库存分配策略</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/库存分配策略/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/ie.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="files/库存分配策略/data.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (cq二级菜单) -->
+
+      <!-- 出库二级菜单 (动态面板) -->
+      <div id="u21303" class="ax_default" data-label="出库二级菜单">
+        <div id="u21303_state0" class="panel_state" data-label="State1">
+          <div id="u21303_state0_content" class="panel_state_content">
+
+            <!-- 出库子菜单 (组合) -->
+            <div id="u21304" class="ax_default" data-label="出库子菜单">
+
+              <!-- 1级菜单 (矩形) -->
+              <div id="u21305" class="ax_default box_1" data-label="1级菜单">
+                <div id="u21305_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21306" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; 出库管理</span></p>
+                </div>
+              </div>
+
+              <!-- 出库单管理 (矩形) -->
+              <div id="u21307" class="ax_default box_1" data-label="出库单管理" selectiongroup="u21302菜单组">
+                <div id="u21307_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21308" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 出库单管理</span></p>
+                </div>
+              </div>
+
+              <!-- 出库单管理 (矩形) [footnote] -->
+              <div id="u21307_ann" class="annotation"></div>
+
+              <!-- 波次下架 (矩形) -->
+              <div id="u21309" class="ax_default box_1" data-label="波次下架" selectiongroup="u21302菜单组">
+                <div id="u21309_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21310" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 波次下架</span></p>
+                </div>
+              </div>
+
+              <!-- 波次下架 (矩形) [footnote] -->
+              <div id="u21309_ann" class="annotation"></div>
+
+              <!-- 自定义下架 (矩形) -->
+              <div id="u21311" class="ax_default box_1" data-label="自定义下架" selectiongroup="u21302菜单组">
+                <div id="u21311_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21312" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 自定义下架</span></p>
+                </div>
+              </div>
+
+              <!-- 自定义下架 (矩形) [footnote] -->
+              <div id="u21311_ann" class="annotation"></div>
+
+              <!-- 打包确认 (矩形) -->
+              <div id="u21313" class="ax_default box_1" data-label="打包确认" selectiongroup="u21302菜单组">
+                <div id="u21313_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21314" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 打包确认</span></p>
+                </div>
+              </div>
+
+              <!-- 打包确认 (矩形) [footnote] -->
+              <div id="u21313_ann" class="annotation"></div>
+
+              <!-- 扫描出库 (矩形) -->
+              <div id="u21315" class="ax_default box_1" data-label="扫描出库" selectiongroup="u21302菜单组">
+                <div id="u21315_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21316" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 扫描出单</span></p>
+                </div>
+              </div>
+
+              <!-- 出库确认 (矩形) -->
+              <div id="u21317" class="ax_default box_1" data-label="出库确认" selectiongroup="u21302菜单组">
+                <div id="u21317_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21318" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 出库确认</span></p>
+                </div>
+              </div>
+
+              <!-- 物流结算管理 (矩形) -->
+              <div id="u21319" class="ax_default box_1" data-label="物流结算管理" selectiongroup="u21302菜单组">
+                <div id="u21319_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21320" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 物流结算管理</span></p>
+                </div>
+              </div>
+
+              <!-- 发货相关处理 (矩形) -->
+              <div id="u21321" class="ax_default box_1" data-label="发货相关处理" selectiongroup="u21302菜单组">
+                <div id="u21321_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21322" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 发货相关处理</span></p>
+                </div>
+              </div>
+
+              <!-- 出库异常 (矩形) -->
+              <div id="u21323" class="ax_default box_1" data-label="出库异常" selectiongroup="u21302菜单组">
+                <div id="u21323_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21324" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 出库异常</span></p>
+                </div>
+              </div>
+
+              <!-- 下架单查询 (矩形) -->
+              <div id="u21325" class="ax_default box_1" data-label="下架单查询" selectiongroup="u21302菜单组">
+                <div id="u21325_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21326" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 下架单查询</span></p>
+                </div>
+              </div>
+
+              <!-- 下架库位更正 (矩形) -->
+              <div id="u21327" class="ax_default box_1" data-label="下架库位更正" selectiongroup="u21302菜单组">
+                <div id="u21327_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21328" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 下架库位更正</span></p>
+                </div>
+              </div>
+
+              <!-- 打印单据 (矩形) -->
+              <div id="u21329" class="ax_default box_1" data-label="打印单据" selectiongroup="u21302菜单组">
+                <div id="u21329_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21330" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 打印单据</span></p>
+                </div>
+              </div>
+
+              <!-- 出库相关配置 (矩形) -->
+              <div id="u21331" class="ax_default box_1" data-label="出库相关配置" selectiongroup="u21302菜单组">
+                <div id="u21331_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21332" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 出库相关配置</span></p>
+                </div>
+              </div>
+
+              <!-- 打包设置 (矩形) -->
+              <div id="u21333" class="ax_default box_1" data-label="打包设置" selectiongroup="u21302菜单组">
+                <div id="u21333_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21334" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 打包设置</span></p>
+                </div>
+              </div>
+
+              <!-- 扫描出库设置 (矩形) -->
+              <div id="u21335" class="ax_default box_1" data-label="扫描出库设置" selectiongroup="u21302菜单组">
+                <div id="u21335_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21336" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 扫描出单设置</span></p>
+                </div>
+              </div>
+
+              <!-- 波次规则 (矩形) -->
+              <div id="u21337" class="ax_default box_1" data-label="波次规则" selectiongroup="u21302菜单组">
+                <div id="u21337_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21338" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 波次规则</span></p>
+                </div>
+              </div>
+
+              <!-- 波次规则 (矩形) -->
+              <div id="u21339" class="ax_default box_1" data-label="波次规则" selectiongroup="u21302菜单组">
+                <div id="u21339_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21340" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 库存分配策略</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u21341" class="ax_default label">
+                <div id="u21341_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21342" class="text" style="visibility: visible;">
+                  <p><span>5</span></p>
+                </div>
+              </div>
+
+              <!-- 换标操作 (矩形) -->
+              <div id="u21343" class="ax_default box_1" data-label="换标操作" selectiongroup="u21302菜单组">
+                <div id="u21343_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21344" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp;&nbsp; 换标操作</span></p>
+                </div>
+              </div>
+
+              <!-- 换标操作 (矩形) [footnote] -->
+              <div id="u21343_ann" class="annotation"></div>
+
+              <!-- 波次规则 (矩形) -->
+              <div id="u21345" class="ax_default box_1" data-label="波次规则" selectiongroup="u21302菜单组">
+                <div id="u21345_div" class=""></div>
+                <!-- Unnamed () -->
+                <div id="u21346" class="text" style="visibility: visible;">
+                  <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 管理模式配置</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21347" class="ax_default label">
+              <div id="u21347_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21348" class="text" style="visibility: visible;">
+                <p><span>订单组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21349" class="ax_default label">
+              <div id="u21349_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21350" class="text" style="visibility: visible;">
+                <p><span>订单组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21351" class="ax_default label">
+              <div id="u21351_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21352" class="text" style="visibility: visible;">
+                <p><span>订单组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21353" class="ax_default label">
+              <div id="u21353_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21354" class="text" style="visibility: visible;">
+                <p><span>打包组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21355" class="ax_default label">
+              <div id="u21355_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21356" class="text" style="visibility: visible;">
+                <p><span>出库组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21357" class="ax_default label">
+              <div id="u21357_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21358" class="text" style="visibility: visible;">
+                <p><span>出库组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21359" class="ax_default label">
+              <div id="u21359_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21360" class="text" style="visibility: visible;">
+                <p><span>异常组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21361" class="ax_default label">
+              <div id="u21361_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21362" class="text" style="visibility: visible;">
+                <p><span>订单组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21363" class="ax_default label">
+              <div id="u21363_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21364" class="text" style="visibility: visible;">
+                <p><span>打包组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21365" class="ax_default label">
+              <div id="u21365_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21366" class="text" style="visibility: visible;">
+                <p><span>出库组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21367" class="ax_default label">
+              <div id="u21367_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21368" class="text" style="visibility: visible;">
+                <p><span>打包组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21369" class="ax_default label">
+              <div id="u21369_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21370" class="text" style="visibility: visible;">
+                <p><span>订单组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21371" class="ax_default label">
+              <div id="u21371_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21372" class="text" style="visibility: visible;">
+                <p><span>订单组</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21373" class="ax_default label">
+              <div id="u21373_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21374" class="text" style="visibility: visible;">
+                <p><span>订单组</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 (动态面板) -->
+      <div id="u21375" class="ax_default" data-label="1">
+        <div id="u21375_state0" class="panel_state" data-label="State1">
+          <div id="u21375_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (图片) -->
+            <div id="u21376" class="ax_default _图片">
+              <img id="u21376_img" class="img " src="images/首页/u3.png"/>
+              <!-- Unnamed () -->
+              <div id="u21377" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (组合) -->
+            <div id="u21378" class="ax_default">
+
+              <!-- Unnamed (形状) -->
+              <div id="u21379" class="ax_default icon">
+                <img id="u21379_img" class="img " src="images/首页/u6.png"/>
+                <!-- Unnamed () -->
+                <div id="u21380" class="text" style="display: none; visibility: hidden">
+                  <p><span></span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21381" class="ax_default box_1">
+              <div id="u21381_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21382" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (椭圆形) -->
+            <div id="u21383" class="ax_default box_1">
+              <img id="u21383_img" class="img " src="images/首页/u10.png"/>
+              <!-- Unnamed () -->
+              <div id="u21384" class="text" style="visibility: visible;">
+                <p><span>3</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (动态面板) -->
+            <div id="u21385" class="ax_default">
+              <div id="u21385_state0" class="panel_state" data-label="State1">
+                <div id="u21385_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (图片) -->
+                  <div id="u21386" class="ax_default _图片">
+                    <img id="u21386_img" class="img " src="images/首页/u81.png"/>
+                    <!-- Unnamed () -->
+                    <div id="u21387" class="text" style="display: none; visibility: hidden">
+                      <p><span></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21388" class="ax_default label">
+              <div id="u21388_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21389" class="text" style="visibility: visible;">
+                <p><span>消息</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21390" class="ax_default box_1">
+              <div id="u21390_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21391" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (下拉列表框) -->
+            <div id="u21392" class="ax_default droplist">
+              <select id="u21392_input">
+                <option value="中文">中文</option>
+                <option value="English">English</option>
+                <option value="Polish">Polish</option>
+              </select>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21393" class="ax_default label">
+              <div id="u21393_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21394" class="text" style="visibility: visible;">
+                <p><span>首页</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21395" class="ax_default label">
+              <div id="u21395_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21396" class="text" style="visibility: visible;">
+                <p><span>入库管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21397" class="ax_default label">
+              <div id="u21397_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21398" class="text" style="visibility: visible;">
+                <p><span>产品管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21399" class="ax_default label">
+              <div id="u21399_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21400" class="text" style="visibility: visible;">
+                <p><span>库存管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21401" class="ax_default label">
+              <div id="u21401_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21402" class="text" style="visibility: visible;">
+                <p><span>增值服务</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21403" class="ax_default label">
+              <div id="u21403_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21404" class="text" style="visibility: visible;">
+                <p><span>业务规则</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21405" class="ax_default label">
+              <div id="u21405_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21406" class="text" style="visibility: visible;">
+                <p><span>基础管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21407" class="ax_default label">
+              <div id="u21407_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21408" class="text" style="visibility: visible;">
+                <p><span>权限管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21409" class="ax_default icon">
+              <img id="u21409_img" class="img " src="images/首页/u44.png"/>
+              <!-- Unnamed () -->
+              <div id="u21410" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21411" class="ax_default icon">
+              <img id="u21411_img" class="img " src="images/首页/u46.png"/>
+              <!-- Unnamed () -->
+              <div id="u21412" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21413" class="ax_default icon">
+              <img id="u21413_img" class="img " src="images/首页/u48.png"/>
+              <!-- Unnamed () -->
+              <div id="u21414" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21415" class="ax_default icon">
+              <img id="u21415_img" class="img " src="images/我的信息/u428.png"/>
+              <!-- Unnamed () -->
+              <div id="u21416" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21417" class="ax_default icon">
+              <img id="u21417_img" class="img " src="images/首页/u54.png"/>
+              <!-- Unnamed () -->
+              <div id="u21418" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21419" class="ax_default icon">
+              <img id="u21419_img" class="img " src="images/首页/u56.png"/>
+              <!-- Unnamed () -->
+              <div id="u21420" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21421" class="ax_default icon">
+              <img id="u21421_img" class="img " src="images/首页/u58.png"/>
+              <!-- Unnamed () -->
+              <div id="u21422" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21423" class="ax_default label">
+              <div id="u21423_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21424" class="text" style="visibility: visible;">
+                <p><span>报表</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21425" class="ax_default icon">
+              <img id="u21425_img" class="img " src="images/首页/u62.png"/>
+              <!-- Unnamed () -->
+              <div id="u21426" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21427" class="ax_default label">
+              <div id="u21427_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21428" class="text" style="visibility: visible;">
+                <p><span>出库管理</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u21429" class="ax_default icon">
+              <img id="u21429_img" class="img " src="images/首页/u50.png"/>
+              <!-- Unnamed () -->
+              <div id="u21430" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u21431" class="ax_default box_1">
+              <div id="u21431_div" class=""></div>
+              <!-- Unnamed () -->
+              <div id="u21432" class="text" style="display: none; visibility: hidden">
+                <p><span></span></p>
+              </div>
+            </div>
+
+            <!-- 账户信息 (动态面板) -->
+            <div id="u21433" class="ax_default ax_default_hidden" data-label="账户信息" style="display: none; visibility: hidden">
+              <div id="u21433_state0" class="panel_state" data-label="State1">
+                <div id="u21433_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (图片) -->
+                  <div id="u21434" class="ax_default _图片">
+                    <img id="u21434_img" class="img " src="images/首页/u67.png"/>
+                    <!-- Unnamed () -->
+                    <div id="u21435" class="text" style="display: none; visibility: hidden">
+                      <p><span></span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u21436" class="ax_default label">
+                    <div id="u21436_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u21437" class="text" style="visibility: visible;">
+                      <p><span>我的账户</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u21438" class="ax_default label">
+                    <div id="u21438_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u21439" class="text" style="visibility: visible;">
+                      <p><span>系统设置</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u21440" class="ax_default label">
+                    <div id="u21440_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u21441" class="text" style="visibility: visible;">
+                      <p><span>退出</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u21442" class="ax_default label">
+                    <div id="u21442_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u21443" class="text" style="visibility: visible;">
+                      <p><span>切换仓库</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (形状) -->
+                  <div id="u21444" class="ax_default icon">
+                    <img id="u21444_img" class="img " src="images/首页/u77.png"/>
+                    <!-- Unnamed () -->
+                    <div id="u21445" class="text" style="display: none; visibility: hidden">
+                      <p><span></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (动态面板) -->
+            <div id="u21446" class="ax_default">
+              <div id="u21446_state0" class="panel_state" data-label="State1">
+                <div id="u21446_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u21447" class="ax_default box_1">
+                    <div id="u21447_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u21448" class="text" style="display: none; visibility: hidden">
+                      <p><span></span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (形状) -->
+                  <div id="u21449" class="ax_default icon">
+                    <img id="u21449_img" class="img " src="images/首页/u15.png"/>
+                    <!-- Unnamed () -->
+                    <div id="u21450" class="text" style="display: none; visibility: hidden">
+                      <p><span></span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u21451" class="ax_default label">
+                    <div id="u21451_div" class=""></div>
+                    <!-- Unnamed () -->
+                    <div id="u21452" class="text" style="visibility: visible;">
+                      <p><span>您好，</span></p><p><span>EDA</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (三角形) -->
+                  <div id="u21453" class="ax_default box_1">
+                    <img id="u21453_img" class="img " src="images/首页/u19.png"/>
+                    <!-- Unnamed () -->
+                    <div id="u21454" class="text" style="display: none; visibility: hidden">
+                      <p><span></span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 显示2 (形状) -->
+      <div id="u21455" class="ax_default icon" data-label="显示2">
+        <img id="u21455_img" class="img " src="images/波次规则/显示2_u13765.png"/>
+        <!-- Unnamed () -->
+        <div id="u21456" class="text" style="display: none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- 显示1 (形状) -->
+      <div id="u21457" class="ax_default icon ax_default_hidden" data-label="显示1" style="display: none; visibility: hidden">
+        <img id="u21457_img" class="img " src="images/波次规则/显示2_u13765.png"/>
+        <!-- Unnamed () -->
+        <div id="u21458" class="text" style="display: none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- 位置 (文本段落) -->
+      <div id="u21459" class="ax_default _文本段落" data-label="位置">
+        <img id="u21459_img" class="img " src="images/波次规则/位置_u13769.png"/>
+        <!-- Unnamed () -->
+        <div id="u21460" class="text" style="visibility: visible;">
+          <p><span>当前位置：出库管理-出库单管理 </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u21461" class="ax_default">
+
+        <!-- Unnamed (组合) -->
+        <div id="u21462" class="ax_default">
+
+          <!-- Unnamed (水平线) -->
+          <div id="u21463" class="ax_default line">
+            <img id="u21463_img" class="img " src="images/波次规则/u13946.png"/>
+            <!-- Unnamed () -->
+            <div id="u21464" class="text" style="display: none; visibility: hidden">
+              <p><span></span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (垂直线) -->
+          <div id="u21465" class="ax_default line">
+            <img id="u21465_img" class="img " src="images/波次规则/u13948.png"/>
+            <!-- Unnamed () -->
+            <div id="u21466" class="text" style="display: none; visibility: hidden">
+              <p><span></span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (水平线) -->
+          <div id="u21467" class="ax_default line">
+            <img id="u21467_img" class="img " src="images/波次规则/u13946.png"/>
+            <!-- Unnamed () -->
+            <div id="u21468" class="text" style="display: none; visibility: hidden">
+              <p><span></span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (垂直线) -->
+          <div id="u21469" class="ax_default line">
+            <img id="u21469_img" class="img " src="images/波次规则/u13948.png"/>
+            <!-- Unnamed () -->
+            <div id="u21470" class="text" style="display: none; visibility: hidden">
+              <p><span></span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u21471" class="ax_default _三级标题">
+          <div id="u21471_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u21472" class="text" style="visibility: visible;">
+            <p><span>库存分配策略</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u21473" class="ax_default">
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21474" class="ax_default table_cell">
+          <img id="u21474_img" class="img " src="images/波次规则/u13957.png"/>
+          <!-- Unnamed () -->
+          <div id="u21475" class="text" style="visibility: visible;">
+            <p><span>锁库存算法</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21476" class="ax_default table_cell">
+          <img id="u21476_img" class="img " src="images/波次规则/u13959.png"/>
+          <!-- Unnamed () -->
+          <div id="u21477" class="text" style="visibility: visible;">
+            <p><span>算法优先级</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21478" class="ax_default table_cell">
+          <img id="u21478_img" class="img " src="images/波次规则/u13961.png"/>
+          <!-- Unnamed () -->
+          <div id="u21479" class="text" style="visibility: visible;">
+            <p><span>操作</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21480" class="ax_default table_cell">
+          <img id="u21480_img" class="img " src="images/波次规则/u13963.png"/>
+          <!-- Unnamed () -->
+          <div id="u21481" class="text" style="visibility: visible;">
+            <p><span>下架优先级</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21482" class="ax_default table_cell">
+          <img id="u21482_img" class="img " src="images/波次规则/u13965.png"/>
+          <!-- Unnamed () -->
+          <div id="u21483" class="text" style="visibility: visible;">
+            <p><span>10</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21484" class="ax_default table_cell">
+          <img id="u21484_img" class="img " src="images/波次规则/u13967.png"/>
+          <!-- Unnamed () -->
+          <div id="u21485" class="text" style="visibility: visible;">
+            <p><span>禁用</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21486" class="ax_default table_cell">
+          <img id="u21486_img" class="img " src="images/波次规则/u13969.png"/>
+          <!-- Unnamed () -->
+          <div id="u21487" class="text" style="visibility: visible;">
+            <p><span>拣货路径最短（拣货序号最小）</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21488" class="ax_default table_cell">
+          <img id="u21488_img" class="img " src="images/波次规则/u13971.png"/>
+          <!-- Unnamed () -->
+          <div id="u21489" class="text" style="visibility: visible;">
+            <p><span>20</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u21490" class="ax_default table_cell">
+          <img id="u21490_img" class="img " src="images/波次规则/u13973.png"/>
+          <!-- Unnamed () -->
+          <div id="u21491" class="text" style="visibility: visible;">
+            <p><span>禁用</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- dxk (列表框) -->
+      <div id="u21492" class="ax_default _列表框 ax_default_hidden" data-label="dxk" style="display: none; visibility: hidden">
+        <select id="u21492_input" size="2" multiple>
+          <option value="A1">A1</option>
+          <option value="A2">A2</option>
+          <option value="A3">A3</option>
+          <option value="P3">P3</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u21493" class="ax_default _文本段落1">
+        <div id="u21493_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u21494" class="text" style="visibility: visible;">
+          <p><span>分区:</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u21495" class="ax_default _形状">
+        <div id="u21495_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u21496" class="text" style="visibility: visible;">
+          <p><span>--请选择--</span></p><p><span>(可多选，默认全选)</span></p>
+        </div>
+      </div>
+
+      <!-- dxk (列表框) -->
+      <div id="u21497" class="ax_default _列表框 ax_default_hidden" data-label="dxk" style="display: none; visibility: hidden">
+        <select id="u21497_input" size="2" multiple>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u21498" class="ax_default _文本段落1">
+        <div id="u21498_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u21499" class="text" style="visibility: visible;">
+          <p><span>通道</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u21500" class="ax_default _形状">
+        <div id="u21500_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u21501" class="text" style="visibility: visible;">
+          <p><span>--请选择--</span></p><p><span>(可多选，默认全选)</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u21502" class="ax_default _文本段落1">
+        <div id="u21502_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u21503" class="text" style="visibility: visible;">
+          <p><span>库位</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (下拉列表框) -->
+      <div id="u21504" class="ax_default droplist">
+        <select id="u21504_input">
+          <option value="Z">Z</option>
+          <option value="X">X</option>
+          <option value="Y">Y</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u21505" class="ax_default _文本段落1">
+        <div id="u21505_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u21506" class="text" style="visibility: visible;">
+          <p><span>等于：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u21507" class="ax_default text_field">
+        <input id="u21507_input" type="text" value=""/>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u21508" class="ax_default">
+
+        <!-- Unnamed (组合) -->
+        <div id="u21509" class="ax_default">
+
+          <!-- Unnamed (水平线) -->
+          <div id="u21510" class="ax_default line">
+            <img id="u21510_img" class="img " src="images/波次规则/u13946.png"/>
+            <!-- Unnamed () -->
+            <div id="u21511" class="text" style="display: none; visibility: hidden">
+              <p><span></span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (垂直线) -->
+          <div id="u21512" class="ax_default line">
+            <img id="u21512_img" class="img " src="images/波次规则/u13979.png"/>
+            <!-- Unnamed () -->
+            <div id="u21513" class="text" style="display: none; visibility: hidden">
+              <p><span></span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (水平线) -->
+          <div id="u21514" class="ax_default line">
+            <img id="u21514_img" class="img " src="images/波次规则/u13946.png"/>
+            <!-- Unnamed () -->
+            <div id="u21515" class="text" style="display: none; visibility: hidden">
+              <p><span></span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (垂直线) -->
+          <div id="u21516" class="ax_default line">
+            <img id="u21516_img" class="img " src="images/波次规则/u13979.png"/>
+            <!-- Unnamed () -->
+            <div id="u21517" class="text" style="display: none; visibility: hidden">
+              <p><span></span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u21518" class="ax_default _三级标题">
+          <div id="u21518_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u21519" class="text" style="visibility: visible;">
+            <p><span>库位限制</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
